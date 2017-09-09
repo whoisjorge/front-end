@@ -1,1 +1,1 @@
-Sitemap: https://whoisjorge.github.io/front-end/sitemap.xml
+Sitemap: https://front-end.js.org/sitemap.xml
