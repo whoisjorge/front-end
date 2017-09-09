@@ -2,7 +2,7 @@
 # Contribuciones
 
 - Crea un **Fork** de la rama `develop` en tu máquina. — ¡No de **master**!
-- Instala y ejecuta el proyecto _(hay instrucciones [más abajo](#instalacion))_.
+- Instala y ejecuta el proyecto _(hay instrucciones [más abajo](#instalación))_.
 - ¡Escribe tu código y/o texto!
   - Si modificas o mejoras el código, haz comentarios en la medida de lo posible, indicando los cambios o la funcionalidad.
   - _Asegúrate de tener un editor con `trim trailing whitespace` activado._
