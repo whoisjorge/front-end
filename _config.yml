@@ -1,7 +1,7 @@
 lang                      : es
 locale                    : es-ES
-url                       : https://whoisjorge.github.io
-baseurl                   : /front-end
+url                       : https://front-end.js.org
+# baseurl                   : /front-end
 
 # External
 google_analytics:
@@ -9,7 +9,7 @@ disqus:
   shortname: front-end-cheatsheets
 
 # Feed / Atom
-domain: whoisjorge.github.io/front-end
+domain: front-end.js.org
 author: Jorge Moliner
 email: email@whoisjorge.me
 
@@ -23,7 +23,7 @@ repository                : https://github.com/whoisjorge/front-end/
 permalink                 : date
 paginate_path             : /:num/
 timezone                  : Europe/Madrid
-# parentsite                : https://front-end.js.org
+parentsite                : https://front-end.js.org
 permalink                 : /:categories/:title/
 
 
