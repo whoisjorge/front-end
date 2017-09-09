@@ -1,5 +1,6 @@
 # production
 _site/
+dist/
 
 # dependencias
 node_modules/

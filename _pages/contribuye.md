@@ -148,5 +148,5 @@ Si utilizas *{% raw %}{{ mustache }}{% endraw %}* en tus **snippets** recuerda e
 
 <br>
 <p align="center">
-<a href="https://github.com/whoisjorge/front-end/CONTRIBUTING.md">CONTRIBUTING.md</a>
+<a href="https://github.com/whoisjorge/front-end/blob/master/docs/CONTRIBUTING.md">CONTRIBUTING.md</a>
 </p>
