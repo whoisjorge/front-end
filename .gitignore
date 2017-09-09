@@ -1,0 +1,18 @@
+# production
+_site/
+
+# dependencias
+node_modules/
+package-lock.json
+Gemfile.lock
+Yarn.lock
+
+# cache & misc.
+.asset-cache
+.sass-cache
+.jekyll-metadata
+.DS_Store
+.vscode
+.idea
+*.log
+*.debug

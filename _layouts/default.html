@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "es" }}">
+{% include HEAD.html %}
+<body>
+
+  <header class="site-header" role="banner">
+    {% include site-header.html %}
+  </header>
+
+
+  <main class="container grid-960" aria-label="Content">
+
+    {{ content }}
+
+  </main>
+
+
+  <footer class="site-footer" role="contentinfo">
+    {% include site-footer.html %}
+  </footer>
+
+
+  <!-- JavaScripts -->
+  {% include FOOT.html %}
+
+
+
+  {% include external/analytics.html %}
+</body>
+</html>

@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+{% include componentes/breadcrums.html %}
+
+<!-- Post -->
+<article itemscope itemtype="http://schema.org/Article">
+
+  <header>
+    <h1 itemprop="name headline">{{ page.title }}</h1>
+    <div class="meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        <code>{{ page.date | date: "%-d de %B, %Y" |
+        replace: "January","enero" | replace:"February","febrero" | replace:"March","marzo" | replace:"April","abril" | replace:"May","mayo" | replace:"June","junio" | replace:"July","julio" | replace:"August","agosto" | replace:"September","septiembre" | replace:"October","octubre" | replace:"November","noviembre" | replace:"December","diciembre" }}
+        </code>
+      </time>
+    </div>
+  </header>
+
+  {% include componentes/share.html %}
+
+  <section itemprop="articleSection">
+
+    {{ content }}
+
+  </section>
+
+  {% include componentes/share.html %}
+
+
+
+  <!-- Comentarios 'Disqus' -->
+  {% if site.disqus.shortname %}{% include external/disqus.html %}{% endif %}
+</article>

@@ -1,0 +1,22 @@
+{% if site.posts %}
+<section class='post-index container grid-960'>
+
+  <p class="pre -updates"><span></span></p>
+
+  <table class="table">
+    <tbody>
+    {% for post in site.posts limit:10 %}
+      <tr>
+        <td>
+          <a class='post-index-item' href="{{ post.url | relative_url | replace: ".html", "" }}">
+            <span class='article'>{{ post.title }}</span>
+          </a>
+        </td>
+        <td class="tag" align="right">{{ post.categories | first }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+</section>
+{% endif %}

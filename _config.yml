@@ -1,0 +1,67 @@
+lang                      : es
+locale                    : es-ES
+url                       : https://whoisjorge.github.io
+baseurl                   : /front-end
+
+# External
+google_analytics:
+disqus:
+  shortname: front-end-cheatsheets
+
+# Feed / Atom
+domain: whoisjorge.github.io/front-end
+author: Jorge Moliner
+email: email@whoisjorge.me
+
+# Información Básica
+title                     : Front-end
+description               : Recopilación de snippets y apuntes sobre tecnología, desarrollo web front-end y lenguajes de programación
+repository                : https://github.com/whoisjorge/front-end/
+
+
+# Outputting
+permalink                 : date
+paginate_path             : /:num/
+timezone                  : Europe/Madrid
+# parentsite                : https://front-end.js.org
+permalink                 : /:categories/:title/
+
+
+# Markdown - conversion
+markdown                  : kramdown
+highlighter               : rouge
+lsi                       : false
+excerpt_separator         : "\n\n"
+
+
+# Gemas
+plugins:
+  #
+  # https://github.com/jekyll/jekyll-assets
+  - jekyll-assets
+  #
+  #
+  # https://github.com/jekyll/jekyll-feed
+  - jekyll-feed
+  # https://github.com/jekyll/jekyll-sitemap
+  - jekyll-sitemap
+  # https://github.com/jekyll/jekyll-seo-tag
+  - jekyll-seo-tag
+  # https://github.com/jekyll/jekyll-gist
+  - jekyll-gist
+
+
+
+# Reglas de procesamiento
+include:
+  # - .htaccess
+  - _pages
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - node_modules
+  - package.json
+  - package-lock.json
+  - README.md
+  - LICENSE

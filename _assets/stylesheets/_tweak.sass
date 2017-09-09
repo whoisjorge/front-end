@@ -1,0 +1,535 @@
+main
+    margin: 10rem 0 8rem 0
+    min-height: 1080px
+
+
+
+
+
+/*  General
+ * ------------------------------------------------------------ */
+body
+    font-family: "CheatsheetSans", $body-font-family
+    line-height: 1.6
+    font-weight: 300
+
+header, footer
+    text-align: center
+
+figure
+    margin: 0
+
+blockquote
+    margin: 0
+
+input, img
+    user-select: none
+
+// What?
+code
+    padding: 2px 4px
+    color: #e06870
+    background-color: #fdf4f4
+    border-radius: .1rem
+
+
+pre
+    background: #fcfcfc
+    margin-bottom: 3rem
+    border-radius: 0
+    padding: 10px 20px
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.08), 0px 0px 4px rgba(0,0,0,0.05)
+    overflow-x: hidden
+    white-space: pre-wrap
+    code
+        display: block
+        font-size: 1.75rem
+        line-height: 1.6
+        color: inherit
+        background: none
+        padding: .9em .5em
+        +mobile
+            font-size: 1.25rem
+        +tablet
+            font-size: 1.5rem
+
+
+
+
+
+
+
+
+
+/*  ARTICLE
+ * ------------------------------------------------------------ */
+article
+    padding: 0 20px
+
+    strong
+        font-weight: 500
+
+    p, ol li, ul li
+        font-size: 22px
+        +mobile
+            font-size: 18px
+        +tablet
+            font-size: 20px
+
+    li
+        border-bottom: 2px solid rgba(172, 179, 194, 0.3)
+        margin-bottom: .8em
+        padding-bottom: .7em
+
+
+    h1
+        font-style: italic
+        color: #111
+        +mobile
+            font-size: 3rem
+        +tablet
+            font-size: 4rem
+
+
+    h2
+        display: flex
+        margin: 1.6em 0 1.1em
+        padding-bottom: 0
+        color: #30373b
+        +mobile
+            font-size: 2.5rem
+        +tablet
+            font-size: 3rem
+        &:after
+            content: ""
+            background: linear-gradient(to right,#000,transparent)
+            height: 1px
+            position: relative
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
+            width: auto
+            margin: .95em 2px 0 10px
+            flex-grow: 1
+            border-radius: 2px
+
+
+    h3
+        margin: 2em 0
+        text-align: left
+        font-weight: 700
+        color: #151515
+        font-size: 1.75rem
+
+    h4
+        margin: 8rem 0 0
+        font-style: italic
+
+    // Referencias
+    h4 + ul:last-of-type
+        li
+            font-size: 2rem
+            border-bottom: none
+            margin: 0
+
+
+    // Fecha
+    .meta
+        font-size: 1.5rem
+        padding-top: 1rem
+        code
+            background: #fafafa
+
+
+
+    // Texto enfatizado amarillo
+    em
+        background-color: rgba(236,198,48,0.1)
+        line-height: inherit
+        padding: 1px 4px 3px 4px
+        white-space: pre-wrap
+        border-bottom: 2px solid rgba(236,198,48,0.3)
+        font-style: normal
+
+
+    hr
+        width: 15%
+        border: 0
+        border-top: 4px solid #ededed
+        margin: 2.5em auto 2.3em
+
+
+    ul
+        list-style: none
+        li:before
+            content: ""
+            display: block
+            position: relative
+            left: -1.2em
+            top: 21px
+            width: 6px
+            height: 6px
+            border-radius: 50%
+            border: solid 1px $gray-color
+
+
+
+
+
+article.page
+    h1
+        margin-bottom: 5rem
+        font-weight: 400
+
+
+
+
+
+
+
+
+/* multiple: ultimas-actualizaciones | categoria |.html  */
+.post-index
+    padding: 9rem 2.5rem 12rem 2.5rem
+    a
+        color: #454d5d
+
+
+    .table tr
+        font-weight: lighter
+        &:nth-of-type(1) .article,
+        &:nth-of-type(2) .article,
+        &:nth-of-type(3) .article
+            font-weight: bold
+        td:first-child
+            padding-right: 0
+
+
+    .tag
+        font-size: 1.5rem
+        font-weight: lighter
+        color: transparent
+        user-select: none
+        +mobile
+            display: none
+
+.table tr:hover .tag
+    color: #acb3c2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//
+//
+// LAYOUTS
+//
+//
+//
+
+
+
+/*
+ * site-header.html
+ * -------------------------------------------------- */
+.site-header
+    position: fixed
+    top: 0
+    width: 100%
+    z-index: 200
+    background: $bg-color
+    background: #202326
+    // border-bottom: solid 1px $border-color
+    border-bottom: solid 1px #202326
+
+    .navbar
+        padding: 15px 20px 10px 20px
+        // max-width: 95rem
+        // margin: 0 auto
+        .navbar-item
+            padding-right: 2rem // eliminar después de beta
+
+
+    .site-description
+        font-size: 1.5rem
+        font-weight: lighter
+        em
+            font-weight: 400
+            font-style: bold
+        small
+            text-align: center
+            sub
+                color: $primary-color-light
+                font-weight: 700
+                &::after, &::before
+                    content: ""
+                    display: inline-block
+                    vertical-align: middle
+                    width: 46px
+                    height: 1px
+                    background: #c0d3da
+                    margin: 0 10px
+        .label
+            line-height: 1.25
+            padding: 1rem .5rem
+
+
+    // Popover
+    .popover.popover-bottom .popover-container
+        left: 54%
+        padding: 1.75rem!important
+        width: 39rem!important
+        .label
+            opacity: .93
+            border-radius: 0
+            box-shadow: 0 0.4rem 1rem rgba(69, 77, 93, .3)
+
+
+
+/* home.html
+ * ------------------------------------------------------------ */
+.grid
+    margin: 0 0 0 10px
+.columns
+    list-style: none
+.grid-item
+    padding: 2rem .5rem 1rem .5rem
+    border-right: 10px solid #fff
+    background-clip: padding-box
+a.grid-item__link
+    color: #fff
+    user-select: none
+.grid-item__link
+    color: #FFFFFF
+    display: block
+    padding: 1rem 1rem 0
+    text-align: center
+    width: 100%
+
+    // old
+    img.grid-item__icon
+        filter: invert(1)
+
+// Invertir el color de los svgicon
+.grid-item__link svg
+    filter: invert(1)
+    width: 48px
+    height: 48px
+
+.grid-item__title
+    font-weight: 300
+
+
+/*  FOOT.html
+ * ------------------------------------------------------------ */
+
+// Muestra texto cuando no hay resultados de búsqueda
+.grid.search__empty:after
+    content: '¡Vaya! No se encontró ningún resultado.'
+    color: $primary-color
+    padding-top: 20%
+    font-size: 1em
+    line-height: 1.5em
+    text-align: center
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+
+
+/*
+ * categoria.html
+ * -------------------------------------------------- */
+
+.categoria
+    padding-top: 1rem
+
+.cat-title
+    font-size: 6.5rem
+    font-style: italic
+    text-shadow: 2px 2px 0 white, 3px 3px 0 #ddd
+    margin-top: 3.5rem
+
+.categoria img
+    display: block
+    float: none
+    margin-left: auto
+    margin-right: auto
+
+
+
+
+
+/*
+ * site-footer.html
+ * -------------------------------------------------- */
+.footer-links
+    // background: $bg-color
+    padding: 2rem
+    h6
+        font-weight: 300
+        line-height: 2
+        a
+            margin: 0 1rem
+        +mobile
+            font-size: 1em
+
+    .licenses
+        font-style: italic
+        font-weight: 100
+        line-height: 1.5
+        +mobile
+            font-size: 1.25rem
+        +tablet
+            font-size: 1.5rem
+        +large
+            font-size: 2rem
+
+a.auth
+    font-weight: lighter
+    font-variant: small-caps
+    font-size: 14px
+    &:hover
+        text-decoration: none
+
+.copy-left
+
+    transform: scaleX(-1)
+    filter: FlipH
+
+
+
+
+/*
+ * sitemap.html
+ * -------------------------------------------------- */
+.sitemap h1
+    visibility: hidden
+    display: none
+.sitemap ul li
+    margin: 0
+    padding: 0
+.robots
+    font-style: italic
+    margin: 6rem 0
+    text-align: center
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *                       COMPONENTES
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * **/
+
+
+/*
+ * breadcrumbs.html
+ * -------------------------------------------------- */
+.breadcrumb
+    text-align: center
+    user-select: none
+    .breadcrumb-item a
+        font-weight: lighter
+        &:hover
+            text-decoration: none
+
+
+
+/*
+ * filtrar-busqueda.html
+ * -------------------------------------------------- */
+.filtrar-categorias
+    padding: 2rem 20px 0 20px
+    h3
+        font-weight: 300
+        text-align: center
+.form-input
+    height: 3.6rem
+
+// Elimina el placeholder
+input:focus::-webkit-input-placeholder
+    color: transparent
+input:focus::-moz-placeholder
+    color: transparent
+input:focus:-ms-input-placeholder
+    color: transparent
+
+
+
+/*
+ * open-source.html
+ * -------------------------------------------------- */
+.empty
+    background: $secondary-color-light
+
+.empty-icon svg
+    width: 92px
+    height: 92px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* beta */
+.popover > span
+    color: white
+    &:hover
+        color: #94D0FF
+    small
+        font-size: .9rem
+        position: absolute
+        bottom: .9rem
+        right: -2.2rem

@@ -1,0 +1,153 @@
+\:root
+    --info-box-text: #84613d
+    --info-box-bg: rgba(255,213,70,0.1)
+    --info-box-link: #EFBB35
+    --info-box-link-hover: #dfa612
+    --info-box-link-underline: rgba(236, 198, 48, .3)
+
+/* ------------------------------------------------------------ */
+
+
+
+/* Info Boxes
+/* ------------------------------------------------------------ */
+.info-box
+    color: var(--info-box-text)
+    background: var(--info-box-bg)
+    padding: 0.8em 1em
+    border-left: 4px solid rgba(236,198,48,0.5)
+    text-align: center
+    position: relative
+
+    a
+        color: var(--info-box-link)
+        transition: all .4s
+        &:hover
+            color: var(--info-box-link-hover)
+            text-decoration-color: var(--info-box-link-underline)
+
+
+    &.warning
+        background: rgba(247,168,139,.15)
+        border-left: 4px solid rgba(247,168,139,.45)
+        a
+            color: #e25d77
+            &:hover
+                color: #dc3958
+                text-decoration-color: rgba(247,168,139,.3)
+
+    &.success
+        background: rgba(114,186,94,.15)
+        border-left: 4px solid rgba(107,183,86,.75)
+        color: rgba(107,183,86,.95)
+        a
+            color: rgba(0, 132, 99, .85)
+            &:hover
+                color: rgba(0, 102, 74, .85)
+                text-decoration-color: rgba(107,183,86,.3)
+
+/* ------------------------------------------------------------ */
+
+
+
+/*
+ * Compartir en RRSS (_includes/componentes/share.html)
+ * ------------------------------------------------------------ */
+.social-share
+    display: flex
+    align-items: center
+    justify-content: center
+    padding-left: 0
+    margin-left: 0
+    margin: 60px 0
+    &:nth-of-type(odd)
+        margin: 40px 0
+    li
+        border-bottom: none
+        padding: 0 4rem
+        &:before
+            display: none
+
+.tooltip:after
+    background: rgba(69, 77, 93, .9)
+    font-size: .8rem
+
+// Grow animation effect
+.grow
+    display: inline-block
+    vertical-align: middle
+    transform: translateZ(0)
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+    backface-visibility: hidden
+    -moz-osx-font-smoothing: grayscale
+    transition-duration: 0.54s
+    transition-property: transform
+.grow:hover,
+.grow:focus,
+.grow:active
+    transform: scale(1.33)
+
+
+
+/*
+ * Encabezados
+ * ------------------------------------------------------------ */
+.pre
+    color: $gray-color
+    text-align: center
+    font-size: 1rem
+    text-transform: uppercase
+    letter-spacing: 2px
+    font-weight: 400
+    margin-bottom: 4rem
+    span
+        border-bottom: solid 2px $gray-color-light
+        padding: 1em 20px
+
+.pre.-apuntes
+    span
+        &:before
+            content: 'Apuntes sobre'
+.pre.-updates
+    span
+        &:before
+            content: 'Actualizado recientemente'
+
+.pre.-sitemap
+    span
+        &:before
+            content: 'Mapa del sitio'
+
+
+
+
+
+
+
+/*
+ *  JavaScript "external"
+ * -------------------------------------------------- */
+
+// Disqus
+hr.disqus
+    border: 0
+    border-top: 7px dotted $dark-color
+    margin: 2.5em auto 2.3em
+    transform: skewY(-6deg)
+    width: 39px
+#disqus_thread
+    margin-top: 12rem
+
+
+
+// scrollProgress.js
+#progress-wrapper
+    width: 100%
+    position: fixed
+    left: 0px
+    top: 53px
+#progress-element
+    width: 100%
+    background-color: $bg-color
+    box-shadow: 0 0 23px 0 #000
+    height: 13px

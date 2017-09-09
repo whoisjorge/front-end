@@ -1,0 +1,79 @@
+{% if page.layout == 'home' %}
+
+  <!-- Un proyecto Open Source -->
+  {% include componentes/open-source.html %}
+
+  <!-- Últimas Actualizaciones -->
+  {% include componentes/actualizaciones.html %}
+
+{% endif %}
+
+
+<section class="footer-links">
+
+  <h6>
+    <a href="{{ "/colabora" | relative_url }}">colabora </a> •
+    <a href="{{ "/sitemap" | relative_url }}">sitemap</a> •
+    <a href="https://github.com/whoisjorge">autor</a>
+  </h6>
+
+
+  <div class="licenses">
+    <small>Snippets de código fuente con licencia open source <a href="#mit-license">MIT</a>.</small>
+    <br>
+    <small>Contenido del sitio disponible bajo la licencia Creative Commons (<a href="https://creativecommons.org/licenses/by/4.0/deed.es_ES" target="_blank">CC BY 4.0</a>).</small>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modals -->
+<aside class="modal" id="mit-license">
+  <a href="#:)" class="modal-overlay" aria-label="Close"></a>
+  <div class="modal-container" role="document">
+
+    <div class="modal-header">
+      <a href="#:)" class="btn btn-clear float-right"></a>
+      <div class="modal-title">Licencia MIT</div>
+    </div>
+
+    <div class="modal-body">
+      <div class="content">
+        <blockquote><i>Esta es una traducción <b>no oficial</b> del texto original de la licencia.</i></blockquote><br>
+        <small>Copyright (c) &lt;año&gt; &lt;titulares del copyright&gt;</small>
+          <br><br>
+        <small>Por lo presente se autoriza, de forma gratuita, a cualquier persona que haya obtenido
+          una copia de este software y archivos de documentación asociados (el "Software"), a utilizar
+          el Software sin restricción, incluyendo sin limitación incluyendo sin limitación los derechos de
+          usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar, y/o vender copias de este
+          Software, así como a permitir a las personas a las que se les proporcione el Software a hacer lo mismo,
+          de acuerdo con las siguientes condiciones:</small>
+          <br><br>
+        <small>El aviso de copyright anterior y este aviso de permiso tendrán que ser incluidos en todas las copias o
+          partes sustanciales del Software.</small>
+          <br><br>
+        <small>EL SOFTWARE SE ENTREGA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, YA SEA EXPRESA O IMPLÍCITA, INCLUYENDO,
+          A MODO ENUNCIATIVO, CUALQUIER GARANTÍA DE COMERCIABILIDAD, IDONEIDAD PARA UN FIN PARTICULAR Y NO INFRACCIÓN.
+          EN NINGÚN CASO LOS AUTORES O TITULARES DEL COPYRIGHT INCLUIDOS EN ESTE AVISO SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN,
+          DAÑOS U OTRAS RESPONSABILIDADES, YA SEA EN UN LITIGIO, AGRAVIO O DE OTRO MODO, RESULTANTES DE O EN CONEXION CON EL
+          SOFTWARE, SU USO U OTRO TIPO DE ACCIONES EN EL SOFTWARE.</small>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <a href="https://opensource.org/licenses/MIT" target="_blank"><button class="btn btn-primary close-modal ">Leer el texto original</button></a>
+      <a href="#:)"><button class="btn btn-primary close-modal ">Atrás</button></a>
+    </div>
+
+  </div>
+</aside>

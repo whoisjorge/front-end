@@ -1,0 +1,25 @@
+{% assign description = "💪🤓 ¡PODER en aumento tras haber leído estos apuntes de " | append: page.category | append: "!" | append: " ✨" %}
+<ul class="social-share">
+
+  <li class="facebook grow" data-hint="Compartir Facebook">
+    <a class="tooltip tooltip-bottom" data-tooltip="Compartir en Facebook"
+    href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ include.page.url }}" target="_blank" rel="noopener">
+       <img src="{% asset_path svgicons/facebook.svg %}" alt="Like" width="20px"/>
+    </a>
+  </li>
+
+  <li class="twitter grow" data-hint="Compartir Twitter">
+    <a class="tooltip tooltip-bottom" data-tooltip="Compartir en Twitter"
+    href="https://twitter.com/intent/tweet?text={{ description }} {{ site.url }}{{ include.page.url }}" target="_blank" rel="noopener">
+      <img src="{% asset_path svgicons/twitter.svg %}" alt="Tweet" width="24px"/>
+    </a>
+  </li>
+
+  <li class="googleplus grow" data-hint="Compartir Google Plus">
+    <a class="tooltip tooltip-bottom" data-tooltip="Compartir en Google+"
+    href="https://plus.google.com/share?url={{ site.url }}{{ include.page.url }}" target="_blank" rel="noopener">
+      <img src="{% asset_path svgicons/googleplus.svg %}" alt="Google+" width="24px"/>
+    </a>
+  </li>
+
+</ul>

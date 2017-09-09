@@ -1,0 +1,27 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="prefetch" href="https://whoisjorge.github.io/front-end">
+  <link rel="prerender" href="https://whoisjorge.github.io/front-end">
+
+  <title>
+    {% if page.title %}{{ page.title | escape }} &larr; {{ site.title | escape }}{% else %}{{ site.description | escape }} &larr; {{ site.title | escape }}{% endif %}
+  </title>
+  <!-- <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}"> -->
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+
+  {% css main inline %}
+
+  <link rel="shortcut icon" href="{{ "/favicon.ico" | relative_url }}" type="image/x-icon">
+  <link rel="icon" sizes="32x32" href="{% asset_path ico/favicon-32x32.png %}">
+  <link rel="icon" sizes="192x192" href="{% asset_path ico/touch-icon-192x192.png %}">
+  <link rel="apple-touch-icon-precomposed" href="{% asset_path ico/apple-touch-icon-180x180-precomposed.png %}">
+
+{% seo title=false %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }} Feed" href="{{ "/feed.xml" | relative_url }}">
+
+</head>
