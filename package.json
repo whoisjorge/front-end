@@ -22,13 +22,13 @@
   },
   "main": "!gulpfile.js",
   "scripts": {
-    "start": "bundler install",
-    "dev": "bundle exec jekyll serve",
+    "start": "bundler install && npm install",
+    "dev": "bundle exec jekyll serve --baseurl /front-end",
     "clean": "bundle exec jekyll clean && rm -rf .asset-cache/",
     "build": "JEKYLL_ENV=production bundle exec jekyll build",
     "watch": "bundle exec jekyll serve --skip-initial-build",
     ":prod": "gulp :prod",
-    "DEPLOY": " 🦄 ",
+    "DEPLOY": " 🦄 git subtree push --prefix dist origin gh-pages ",
     "test": "echo \"Error: no test specified\" && exit 1",
     ":dev": "gulp"
   },
