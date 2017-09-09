@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es"><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="https://whoisjorge.github.io/front-end/feed.xml" rel="self" type="application/atom+xml" /><link href="https://whoisjorge.github.io/front-end/" rel="alternate" type="text/html" hreflang="es" /><updated>2017-09-09T11:27:27+02:00</updated><id>https://whoisjorge.github.io/front-end/</id><title type="html">Front-end</title><subtitle>Recopilación de snippets y apuntes sobre tecnología, desarrollo web front-end y lenguajes de programación</subtitle><author><name>Jorge Moliner</name></author><entry><title type="html">Layout escrito en Liquid para comprimir el código HTML</title><link href="https://whoisjorge.github.io/front-end/jekyll/jekyll-comprimir-HTML/" rel="alternate" type="text/html" title="Layout escrito en Liquid para comprimir el código HTML" /><published>2017-09-09T00:00:00+02:00</published><updated>2017-09-09T00:00:00+02:00</updated><id>https://whoisjorge.github.io/front-end/jekyll/jekyll-comprimir-HTML</id><content type="html" xml:base="https://whoisjorge.github.io/front-end/jekyll/jekyll-comprimir-HTML/">&lt;p&gt;Si optas por no utilizar herramientas externas para comprimir el código HTML en un desarrollo con &lt;em&gt;Jekyll&lt;/em&gt;, existe una forma muy sencilla para hacerlo sin recurrir a plugins. Se trata de incluir este layout, escrito puramente en &lt;a href=&quot;https://help.shopify.com/themes/liquid/basics&quot;&gt;Liquid&lt;/a&gt;, como layout principal de otro de nivel superior.&lt;/p&gt;
+
+&lt;h2 id=&quot;instalación&quot;&gt;Instalación&lt;/h2&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;_layouts
+touch comprimir.html
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;comprimirhtml&quot;&gt;comprimir.html&lt;/h3&gt;
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Jekyll layout that compresses HTML&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# v1.1.1&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# http://jch.penibelst.de/&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# © 2015 Anatol Broder&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# MIT License&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+
+{% if site.compress_html.ignore.envs contains jekyll.environment %}{{ content }}{% else %}{% capture _content %}{{ content }}{% endcapture %}{% if site.compress_html.endings == &quot;all&quot; %}{% assign _endings = &quot;html head body li dt dd p rt rp optgroup option colgroup caption thead tbody tfoot tr td th&quot; | split: &quot; &quot; %}{% else %}{% assign _endings = site.compress_html.endings %}{% endif %}{% for _element in _endings %}{% capture _end %}&lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;/{{ _element }}&amp;gt;{% endcapture %}{% assign _content = _content | remove: _end %}{% endfor %}{% if site.compress_html.comments.size == 2 %}{% assign _comment_befores = _content | split: site.compress_html.comments.first %}{% for _comment_before in _comment_befores %}{% assign _comment_content = _comment_before | split: site.compress_html.comments.last | first %}{% if _comment_content %}{% capture _comment %}{{ site.compress_html.comments.first }}{{ _comment_content }}{{ site.compress_html.comments.last }}{% endcapture %}{% assign _content = _content | remove: _comment %}{% endif %}{% endfor %}{% endif %}{% assign _pre_befores = _content | split:&quot;&lt;span class=&quot;nt&quot;&gt;&amp;lt;pre&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;%}{%&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;assign&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;_content =&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;%}{%&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;_pre_before&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;_pre_befores&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;%}{%&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;assign&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;_pres =&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;_pre_before&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;split:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&quot;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;pre&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&quot; %}{% case _pres.size %}{% when 2 %}{% capture _content %}{{ _content }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;pre&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;_pres&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;}}&amp;lt;/&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;pre&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{ _pres.last | split: &quot; &quot; | join: &quot; &quot; }}{% endcapture %}{% when 1 %}{% capture _content %}{{ _content }}{{ _pres.last | split: &quot; &quot; | join: &quot; &quot; }}{% endcapture %}{% endcase %}{% endfor %}{% if site.compress_html.clippings == &quot;all&quot; %}{% assign _clippings = &quot;html head title base link meta style body article section nav aside h1 h2 h3 h4 h5 h6 hgroup header footer address p hr blockquote ol ul li dl dt dd figure figcaption main div table caption colgroup col tbody thead tfoot tr td th&quot; | split: &quot; &quot; %}{% else %}{% assign _clippings = site.compress_html.clippings %}{% endif %}{% for _element in _clippings %}{% assign _edges = &quot; &lt;span class=&quot;nt&quot;&gt;&amp;lt;e&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&amp;lt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/e&amp;gt;&lt;/span&gt;;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/e&amp;gt;&lt;/span&gt; ;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/e&amp;gt;&lt;/span&gt;&quot; | replace: &quot;e&quot;, _element | split: &quot;;&quot; %}{% assign _content = _content | replace: _edges&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;, _edges&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; | replace: _edges&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;, _edges&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; | replace: _edges&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;, _edges&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; %}{% endfor %}{{ _content }}{% endif %}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ahora haz referencia a &lt;code class=&quot;highlighter-rouge&quot;&gt;comprimir.html&lt;/code&gt; en cualquier layout de nivel superior, como por ejemplo en &lt;code class=&quot;highlighter-rouge&quot;&gt;_layouts/default.html&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;comprimir&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+{{ content }}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;referencias&quot;&gt;Referencias&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://jch.penibelst.de/&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jorge Moliner</name></author><category term="jekyll" /><category term="cheatsheet" /><category term="snippets" /><summary type="html">Si optas por no utilizar herramientas externas para comprimir el código HTML en un desarrollo con Jekyll, existe una forma muy sencilla para hacerlo sin recurrir a plugins. Se trata de incluir este layout, escrito puramente en Liquid, como layout principal de otro de nivel superior.</summary></entry><entry><title type="html">Jekyll cheatsheet</title><link href="https://whoisjorge.github.io/front-end/jekyll/jekyll-cheatsheet/" rel="alternate" type="text/html" title="Jekyll cheatsheet" /><published>2017-09-06T00:00:00+02:00</published><updated>2017-09-06T00:00:00+02:00</updated><id>https://whoisjorge.github.io/front-end/jekyll/jekyll-cheatsheet</id><content type="html" xml:base="https://whoisjorge.github.io/front-end/jekyll/jekyll-cheatsheet/">&lt;p class=&quot;info-box&quot;&gt;Esta página está muy incompleta. &lt;a href=&quot;&quot;&gt;¡Envía tus cambios a través de GitHub!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;instalación&quot;&gt;Instalación&lt;/h3&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Instala las gemas&lt;/span&gt;
+gem install jekyll bundler
+
+&lt;span class=&quot;c&quot;&gt;# Crea un nuevo sitio en `./websitio`&lt;/span&gt;
+jekyll new websitio
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;websitio
+
+&lt;span class=&quot;c&quot;&gt;# Let's go!&lt;/span&gt;
+bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;front-matter&quot;&gt;&lt;a href=&quot;http://jekyllrb.com/docs/frontmatter/&quot;&gt;Front-matter&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;      &lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;       &lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;description&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;date&lt;/span&gt;        &lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;category&lt;/span&gt;    &lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;tags&lt;/span&gt;        &lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;author&lt;/span&gt;      &lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;permalink&lt;/span&gt;   &lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;comments&lt;/span&gt;    &lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;sitemap&lt;/span&gt;     &lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+
+Un estupendo post en markdown.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;código&quot;&gt;Código&lt;/h3&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;highlight&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ruby&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+def show
+  ...
+end
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;endhighlight&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;blogging&quot;&gt;Blogging&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;_posts/YEAR-MONTH-DAY-title.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;comentarios&quot;&gt;Comentarios&lt;/h3&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;     ...&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;endcomment&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;referencias&quot;&gt;Referencias&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://jekyllrb.com/docs/home/&lt;/li&gt;
+  &lt;li&gt;http://jekyllrb.com/docs/templates/&lt;/li&gt;
+  &lt;li&gt;http://docs.shopify.com/themes/liquid-basics/output&lt;/li&gt;
+  &lt;li&gt;http://docs.shopify.com/themes/liquid-basics/logic&lt;/li&gt;
+  &lt;li&gt;https://github.com/Shopify/liquid/wiki/Liquid-for-Designers&lt;/li&gt;
+  &lt;li&gt;http://docs.shopify.com/themes/liquid-documentation/filters&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jorge Moliner</name></author><category term="jekyll" /><category term="cheatsheet" /><category term="snippets" /><summary type="html">Esta página está muy incompleta. ¡Envía tus cambios a través de GitHub!</summary></entry><entry><title type="html">Lista de plugins útiles para Gulp</title><link href="https://whoisjorge.github.io/front-end/gulp/gulp-plugins/" rel="alternate" type="text/html" title="Lista de plugins útiles para Gulp" /><published>2017-08-30T00:00:00+02:00</published><updated>2017-08-30T00:00:00+02:00</updated><id>https://whoisjorge.github.io/front-end/gulp/gulp-plugins</id><content type="html" xml:base="https://whoisjorge.github.io/front-end/gulp/gulp-plugins/">&lt;p class=&quot;info-box&quot;&gt;Esta página está incompleta. &lt;a href=&quot;&quot;&gt;¡Envía tus cambios a través de GitHub!&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;gulp-ruby-sass&lt;/li&gt;
+  &lt;li&gt;gulp-autoprefixer&lt;/li&gt;
+  &lt;li&gt;gulp-minify-css&lt;/li&gt;
+  &lt;li&gt;gulp-jshint&lt;/li&gt;
+  &lt;li&gt;gulp-concat&lt;/li&gt;
+  &lt;li&gt;gulp-uglify&lt;/li&gt;
+  &lt;li&gt;gulp-imagemin&lt;/li&gt;
+  &lt;li&gt;gulp-livereload (requires tiny-lr)&lt;/li&gt;
+  &lt;li&gt;gulp-clean&lt;/li&gt;
+  &lt;li&gt;gulp-cache&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;referencias&quot;&gt;Referencias&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;https://gulpjs.com/plugins/&lt;/li&gt;
+  &lt;li&gt;https://www.npmjs.com/&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jorge Moliner</name></author><category term="gulp" /><category term="cheatsheet" /><category term="collection" /><summary type="html">Esta página está incompleta. ¡Envía tus cambios a través de GitHub!</summary></entry><entry><title type="html">Atom cheatsheet</title><link href="https://whoisjorge.github.io/front-end/atom/atom-cheatsheet/" rel="alternate" type="text/html" title="Atom cheatsheet" /><published>2017-08-29T00:00:00+02:00</published><updated>2017-08-29T00:00:00+02:00</updated><id>https://whoisjorge.github.io/front-end/atom/atom-cheatsheet</id><content type="html" xml:base="https://whoisjorge.github.io/front-end/atom/atom-cheatsheet/">&lt;h3 id=&quot;symbols-view&quot;&gt;Symbols view&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;^ ⌥ down&lt;/code&gt; - jump to declaration under cursor&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;^ ⇧ r&lt;/code&gt; - show tags&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bracket-matcher&quot;&gt;Bracket matcher&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;^ m&lt;/code&gt; - go to matching bracket&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;^ ]&lt;/code&gt; - remove brackets from selection&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;^ ⌘ m&lt;/code&gt; - select inside brackets&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;⌥ ⌘ .&lt;/code&gt; - close tag&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;referencias&quot;&gt;Referencias&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://ricostacruz.com/cheatsheets/atom&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jorge Moliner</name></author><category term="atom" /><category term="cheatsheet" /><summary type="html">Symbols view</summary></entry><entry><title type="html">Comandos esenciales Git</title><link href="https://whoisjorge.github.io/front-end/git/comandos-esenciales-git/" rel="alternate" type="text/html" title="Comandos esenciales Git" /><published>2017-08-25T00:00:00+02:00</published><updated>2017-08-25T00:00:00+02:00</updated><id>https://whoisjorge.github.io/front-end/git/comandos-esenciales-git</id><content type="html" xml:base="https://whoisjorge.github.io/front-end/git/comandos-esenciales-git/">&lt;h3 id=&quot;crear-nuevos-repositorios&quot;&gt;Crear nuevos repositorios&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Crea un repositorio local&lt;/span&gt;
+git init
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Clona un repositorio existente mediante SSH&lt;/span&gt;
+git clone git@github.com:&amp;lt;username&amp;gt;/&amp;lt;repository&amp;gt;.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;registrar-cambios&quot;&gt;Registrar cambios&lt;/h3&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Observar cambios en el directorio de trabajo&lt;/span&gt;
+git status
+
+&lt;span class=&quot;c&quot;&gt;# Cambios en archivos seleccionados&lt;/span&gt;
+git diff
+
+&lt;span class=&quot;c&quot;&gt;# Añade todos los cambios al siguiente commit&lt;/span&gt;
+git add -p &amp;lt;archivo&amp;gt;
+git add .
+git commit -m &lt;span class=&quot;s2&quot;&gt;&quot;mensaje&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;historial-de-commits&quot;&gt;Historial de commits&lt;/h3&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Muestra todos los commit de forma cronologicamente descendente&lt;/span&gt;
+git log
+
+&lt;span class=&quot;c&quot;&gt;# Muestra los cambios en el tiempo de un archivo específico&lt;/span&gt;
+git log -p &amp;lt;archivo&amp;gt;
+
+&lt;span class=&quot;c&quot;&gt;# Información detallada de los cambios&lt;/span&gt;
+git blame &amp;lt;archivo&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;ayuda-y-documentación&quot;&gt;Ayuda y Documentación&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git help &amp;lt;comando&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;referencias&quot;&gt;Referencias&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://git-scm.com/&quot;&gt;Sitio web oficial de Git&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://try.github.io&quot;&gt;Aprende Git desde el navegador&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jorge Moliner</name></author><category term="git" /><category term="comandos" /><category term="esenciales" /><summary type="html">Crear nuevos repositorios</summary></entry></feed>
