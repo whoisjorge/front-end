@@ -1,4 +1,4 @@
-# Front-end `cheatsheets`
+# FRONT-END `cheatsheets`
 
 > Una __colección de publicaciones__ con apuntes acerca de distintas tecnologías sobre desarrollo web front-end — _y lenguajes de programación en general_ —  organizadas de forma sintética y muy descriptiva.
 
@@ -8,7 +8,7 @@
 </div>
 <br>
 
-<p align="center">✨ <a href="https://front-end.js.org">whoisjorge.me/front-end</a> ✨</p>
+<p align="center">✨ <a href="https://whoisjorge.github.io/front-end">whoisjorge.me/front-end</a> ✨</p>
 
 <br>
 
