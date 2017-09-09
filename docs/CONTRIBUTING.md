@@ -23,7 +23,7 @@ Principalmente asegúrate de poder utilizar [Ruby] y [Git] en un terminal. Con e
 
 Así habrás iniciado un servidor de desarrollo en `localhost:4000/front-end/`.
 
-Si quieres un entorno con **Browsersync**:
+Para un entorno con **Browsersync**:
 
 1. Instala [Node.js] y [npm]
    * Para actualizar _npm_ a la última version `npm install npm@latest -g`
@@ -35,6 +35,7 @@ Si quieres un entorno con **Browsersync**:
 
 __DEVELOPMENT__
 
+* `npm start`
 * `npm run dev`
 * `npm run clean`
 
@@ -44,6 +45,10 @@ __PRODUCTION__
 * `npm run build`
 * `gulp :prod`
 * `npm run watch`
+
+__DEPLOY__
+
+* `npm run deploy`
 
 
 
@@ -59,6 +64,7 @@ __PRODUCTION__
 
 <hr>
 
+__Documento provisional__
 
 
 

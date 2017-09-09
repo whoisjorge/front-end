@@ -1,14 +1,16 @@
-# FRONT-END `cheatsheets`
+# Front-end <small><i>cheatsheets</i></small>
 
-> Una __colección de publicaciones__ con apuntes acerca de distintas tecnologías sobre desarrollo web front-end — _y lenguajes de programación en general_ —  organizadas de forma sintética y muy descriptiva.
+> Una __colección de publicaciones__ de código abierto con apuntes acerca de distintas tecnologías sobre desarrollo web front-end — _y lenguajes de programación en general_ —  organizadas de forma sintética y muy descriptiva.
 
 <br>
 <div align="center">
-  <img width="120" src="./docs/header.png" alt="logo">
+  <a href="https://front-end.js.org">
+    <img width="100" src="./docs/header.png" alt="logo">
+  </a>
 </div>
 <br>
 
-<p align="center">✨ <a href="https://front-end.js.org">front-end.js.org!</a> ✨</p>
+<p align="center">👉 <a href="https://front-end.js.org">front-end.js.org!</a> ✨</p>
 
 <br>
 
@@ -25,10 +27,10 @@ Se trata de una **iniciativa de _código abierto_**, por lo que tanto el código
 
 <hr>
 
-> Si haces uso de alguno de los materiales de este repositorio sería espectacular recibir un link de vuelta al proyecto como forma de agradecimiento — ¡Aunque no es obligatorio!
+> Si haces uso de alguno de los materiales de este repositorio sería espectacular recibir un enlace de vuelta hacia el proyecto... ¡Aunque no es obligatorio!
 
 <hr>
-
+<br>
 
 
 ## Herramientas de desarrollo
@@ -42,10 +44,10 @@ Estos son algunos recursos _open source_ increíbles que han sido incluídos de 
 - [Spectre.css] — Ligero y minimalista **_Framework CSS_**
 - [JS.org] — Una comunidad dedicada a los desarrolladores **JavaScript**
 
-
+<br>
 
 ## Contribuciones
-Si tienes alguna idea, sugerencia, o corrección sería estupendo poder incluir tus aportaciones en este repositorio > [CONTRIBUTING.md](/docs/CONTRIBUTING.md)
+Si tienes alguna idea, sugerencia, o corrección sería estupendo poder incluir tus aportaciones en este repositorio. Para más información visita [CONTRIBUTING.md](/docs/CONTRIBUTING.md)
 
 
 <br>

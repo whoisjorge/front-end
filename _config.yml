@@ -1,3 +1,11 @@
+# Feed / Atom
+domain: front-end.js.org
+author: Jorge Moliner
+email: email@whoisjorge.me
+
+# ############# #
+# Configuración #
+# ############# #
 lang                      : es
 locale                    : es-ES
 url                       : https://front-end.js.org
@@ -6,20 +14,22 @@ url                       : https://front-end.js.org
 # `bundle exec jekyll serve --baseurl /front-end`
 # baseurl                   : /front-end
 
+# GitHub metadata
+# https://help.github.com/articles/repository-metadata-on-github-pages/
+repository                : whoisjorge/front-end
+
+
+
+# Información Básica
+title                     : Front-end
+description               : Recopilación de snippets y apuntes sobre tecnología, desarrollo web front-end y lenguajes de programación
+gh_repo                   : https://github.com/whoisjorge/front-end/
+
 # External
 google_analytics:
 disqus:
   shortname: front-end-cheatsheets
 
-# Feed / Atom
-domain: front-end.js.org
-author: Jorge Moliner
-email: email@whoisjorge.me
-
-# Información Básica
-title                     : Front-end
-description               : Recopilación de snippets y apuntes sobre tecnología, desarrollo web front-end y lenguajes de programación
-repository                : https://github.com/whoisjorge/front-end/
 
 
 # Outputting
@@ -28,7 +38,6 @@ paginate_path             : /:num/
 timezone                  : Europe/Madrid
 parentsite                : https://front-end.js.org
 permalink                 : /:categories/:title/
-
 
 # Markdown - conversion
 markdown                  : kramdown
