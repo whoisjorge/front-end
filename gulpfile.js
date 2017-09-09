@@ -50,24 +50,24 @@ gulp.task(':prod', ['autoprefixer','htmlmin']);
 // -----------------------------------------------------------------------------
 gulp.task('autoprefixer', function () {
     return gulp
-        .src('_site/assets/main.css')
+        .src('dist/assets/main.css')
         .pipe(prefix([
           'last 16 versions',
            '> 1%'
           ]))
-        .pipe(gulp.dest('_site/assets'))
+        .pipe(gulp.dest('dist/assets'))
 });
 
 // -----------------------------------------------------------------------------
 //    Minificar HTML - (https://github.com/jonschlinkert/gulp-htmlmin)
 // -----------------------------------------------------------------------------
 gulp.task('htmlmin', function () {
-    return gulp.src('_site/**/*.html')
+    return gulp.src('dist/**/*.html')
       .pipe(htmlmin({
         collapseWhitespace: true,
         removeComments: true,
         minifyCSS: true,
         minifyJS: true
       }))
-      .pipe(gulp.dest('_site'));
+      .pipe(gulp.dest('dist'));
 });
