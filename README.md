@@ -8,7 +8,7 @@
 </div>
 <br>
 
-<p align="center">✨ <a href="https://whoisjorge.github.io/front-end">whoisjorge.me/front-end</a> ✨</p>
+<p align="center">✨ <a href="https://front-end.js.org">front-end.js.org!</a> ✨</p>
 
 <br>
 
