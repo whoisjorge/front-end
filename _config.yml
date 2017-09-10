@@ -3,21 +3,19 @@ domain: front-end.js.org
 author: Jorge Moliner
 email: email@whoisjorge.me
 
-# ############# #
-# Configuración #
-# ############# #
+
+# Configuración
 lang                      : es
-locale                    : es-ES
 url                       : https://front-end.js.org
 
 # Desarrollo en http://localhost:4000/front-end/
 # `bundle exec jekyll serve --baseurl /front-end`
 # baseurl                   : /front-end
 
+
 # GitHub metadata
 # https://help.github.com/articles/repository-metadata-on-github-pages/
 repository                : whoisjorge/front-end
-
 
 
 # Información Básica
@@ -65,9 +63,8 @@ plugins:
 
 
 # Reglas de procesamiento
-include:
-  # - .htaccess
-  - _pages
+safe                      : false
+include                   : [".htaccess", "_pages"]
 exclude:
   - Gemfile
   - Gemfile.lock

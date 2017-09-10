@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contribuye enviando contenido y/o código al repositorio  📝
+title: Envía tus contribuciones al repositorio de este proyecto 📝
 permalink: /colabora/
 ---
 

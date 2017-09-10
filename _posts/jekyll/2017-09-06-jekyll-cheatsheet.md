@@ -10,7 +10,8 @@ tags        : cheatsheet snippets
 ---
 
 {: .info-box }
-Esta página está muy incompleta. [¡Envía tus cambios a través de GitHub!]()
+Esta página está muy incompleta. [¡Envía tus cambios a través de GitHub!]({{site.gh_repo}}blob/master/{{ page.path | remove: '.html' }})
+
 
 ### Instalación
 

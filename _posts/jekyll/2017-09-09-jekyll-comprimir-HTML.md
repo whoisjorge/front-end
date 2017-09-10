@@ -8,9 +8,7 @@ category    : jekyll
 tags        : cheatsheet snippets
 ---
 
-Si optas por no utilizar herramientas externas para comprimir el código HTML en un desarrollo con *Jekyll*, existe una forma muy sencilla para hacerlo sin recurrir a plugins. Se trata de incluir este layout, escrito puramente en [Liquid](https://help.shopify.com/themes/liquid/basics), como layout principal de otro de nivel superior.
-
-## Instalación
+Si optas por no utilizar herramientas externas para comprimir el código HTML en un desarrollo con *Jekyll*, existe una forma muy sencilla para hacerlo sin recurrir a plugins. Se trata de incluir este layout, escrito puramente en [Liquid](https://help.shopify.com/themes/liquid/basics), como layout principal de otro de nivel superior:
 
 ```sh
 cd _layouts
