@@ -1,10 +1,13 @@
 ---
 layout: page
-title: Envía tus contribuciones al repositorio de este proyecto 📝
+title: Envía tus contribuciones al repositorio de este proyecto
 permalink: /colabora/
 ---
 
-Si estás pensando en colaborar con este proyecto y enviar contribuciones al repositorio, échale un vistazo a esta pequeña guía de estilo sobre cómo "estructurar" nuevo contenido. El sitio está enteramente creado con *Jekyll* por lo que todos los artículos se escriben utilizando [markdown](https://jekyllrb.com/docs/posts/).
+{: .text-center}
+📝
+
+Si estás pensando en colaborar con este proyecto y enviar contribuciones al repositorio, échale un vistazo a esta pequeña guía de estilo sobre cómo estructurar nuevo contenido. El sitio está enteramente creado con *Jekyll* por lo que todos los artículos se escriben utilizando [markdown](https://jekyllrb.com/docs/posts/).
 
 {: .info-box .success}
 También puedes enviar tus contribuciones [directamente](https://github.com/whoisjorge/front-end/issues/new?title=Nueva%20solicitud:%20_CARACTERISTICA_) a través del repositorio en GitHub.
@@ -40,7 +43,11 @@ comments: false
 ---
 ```
 
-Y los nombres de los archivos, deben comenzar siempre con la fecha de creación:
+
+
+### Fechas
+
+Los nombres de los ficheros que contienen los artículos, deben comenzar siempre con la fecha de última modificación:
 
 ```md
 2017-12-25-feliz-navidad.md
@@ -60,15 +67,33 @@ Sin duda la nueva función de `setCurrency()` causará estragos a los desarrolla
 
 
 
+## Listas
+
+Para hacer un desglose de ideas, o simplemente listar características, puedes utilizar:
+
+```md
+1. *Punto 1*: Lista ordenada.
+2. *Punto 2*: Texto sin bullets.
+3. *Punto 3*: En realidad no está numerada.
+
+- Esta es una gran ul > li
+```
+
+- *Lista 1*: Texto con bullets.
+
+
+
 ## Cajas de información
 
 Puedes resaltar cierta información utilizando cajas:
 
 ```md
-{: .info-box .warning}
+{: .info-box}
 Aquí va el texto a resaltar.
-```
 
+# Existen 2 clases específicas
+.success  |  .warning   >   {: .info-box .warning}
+```
 
 {: .info-box .warning}
 <b>¡Cuidado!</b> Las cajas de información son adictivas.
@@ -95,7 +120,7 @@ Los enlaces internos deben ser relativos:
 
 ```md
 <!--  Evita esto -->
-[Enlace malo](https://whoisjorge.github.io/javascript/el-mejor-post-pero-evitalo/)
+[Enlace malo](https://front-end.js.org/javascript/el-mejor-post-pero-evitalo/)
 
 <!-- Buen enlace interno -->
 [Enlace relativo](css/css-cheatsheet-esencial/)
@@ -139,14 +164,28 @@ Si utilizas *{% raw %}{{ mustache }}{% endraw %}* en tus **snippets** recuerda e
 {{ "{% raw %" }}}{% raw %}{{ mustache }}{% endraw %}{{ "{% endraw %" }}}
 ```
 
+### Especificando el nombre del archivo
 
+Al escribir código, muchas veces será relevante epecificar el nombre del archivo al que se hace refencia. Puedes hacerlo mediante un *h5* de esta forma:
 
-## Algunos emoji simpáticos
+```liquid
+##### `./js/nombre_de_archivo.js`
+```
 
-👻 💃 🐊 🍪 🤘 🐒 👋 🦄 😎 🐌 🤓 🎩 👉 🌵 🐘 💣 🐳 👾 🕷 🐼 💪 🐷 ✨ 🚀 🍄 🌈 🐸 🎭 🌟 🐙 ⚡ 😷 🌴 😍 🌶 🤖 ☁ 👽 🧀 🐥 🔥 🐢 🍕 🐟 🐿 🍿 🐪 🎮 🐻 🚣‍
+##### `./js/nombre_de_archivo.js`
 
+```javascript
+console.log('¡Funciona!');
+```
 
-<br>
+---
+
 <p align="center">
 <a href="https://github.com/whoisjorge/front-end/blob/master/docs/CONTRIBUTING.md">CONTRIBUTING.md</a>
 </p>
+
+---
+
+👻 💃 🐊 🍪 🤘 🐒 👋 🦄 😎 🐌 🤓 🎩 👉 🌵 🐘 💣 🐳 👾 🕷 🐼 💪 🐷 ✨ 🚀 🍄 🌈 🐸 🎭 🌟 🐙 ⚡ 🌴 🌶 🤖 ☁ 👽 🧀 🔥 🐢 🍕 🐟 🐿 🍿 🐪 🎮 🐻 🚣‍
+
+

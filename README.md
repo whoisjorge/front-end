@@ -3,34 +3,29 @@
 > Una __colección de publicaciones__ de código abierto con apuntes acerca de distintas tecnologías sobre desarrollo web front-end — _y lenguajes de programación en general_ —  organizadas de forma sintética y muy descriptiva.
 
 <br>
-<div align="center">
+
+<p align="center">
   <a href="https://front-end.js.org">
-    <img width="100" src="./docs/header.png" alt="logo">
+    <img width="100" src="./docs/teaser.png" alt="logo">
   </a>
-</div>
+  <br><br>
+  👉 <b><a href="https://front-end.js.org">Front-end.JS.ORG!</a> </b> ✨
+</p>
+
 <br>
 
-<p align="center">👉 <a href="https://front-end.js.org">front-end.js.org!</a> ✨</p>
-
-<br>
 
 
 ## Un proyecto Open Source
-Se trata de una **iniciativa de _código abierto_**, por lo que tanto el código fuente de este repositorio como el contenido del sitio es de libre utilización y/o modificación según los términos de la [licencia](/LICENSE), más concretamente:
+Se trata de una **iniciativa de _código abierto_**, por lo que tanto el código fuente de este repositorio como el contenido del sitio es de libre utilización y/o modificación según los términos de la [licencia](/LICENSE):
 
 - Snippets de código fuente con licencia Open Source [MIT]
 - Contenido de los textos así como algunas imágenes [CC BY 4.0]
 
-**Nota:** _En caso de que algún material se encuentre bajo una licencia que difiera de las mencionadas anteriormente, por cualquier motivo, se especificará adjunta la licencia correspondiente o una referencia a la misma._
-
 <p align="center">♻️</p>
 
-<hr>
+**Nota:** _En caso de que algún material se encuentre bajo una licencia que difiera de las mencionadas anteriormente, por cualquier motivo, se especificará adjunta la licencia correspondiente o una referencia a la misma._
 
-> Si haces uso de alguno de los materiales de este repositorio sería espectacular recibir un enlace de vuelta hacia el proyecto... ¡Aunque no es obligatorio!
-
-<hr>
-<br>
 
 
 ## Herramientas de desarrollo
@@ -44,9 +39,9 @@ Estos son algunos recursos _open source_ increíbles que han sido incluídos de 
 - [Spectre.css] — Ligero y minimalista **_Framework CSS_**
 - [JS.org] — Una comunidad dedicada a los desarrolladores **JavaScript**
 
-<br>
 
-## Contribuciones
+
+## Envía tus contribuciones
 Si tienes alguna idea, sugerencia, o corrección sería estupendo poder incluir tus aportaciones en este repositorio. Para más información visita [CONTRIBUTING.md](/docs/CONTRIBUTING.md)
 
 

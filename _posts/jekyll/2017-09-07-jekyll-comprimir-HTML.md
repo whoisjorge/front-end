@@ -8,14 +8,16 @@ category    : jekyll
 tags        : cheatsheet snippets
 ---
 
-Si optas por no utilizar herramientas externas para comprimir el código HTML en un desarrollo con *Jekyll*, existe una forma muy sencilla para hacerlo sin recurrir a plugins. Se trata de incluir este layout, escrito puramente en [Liquid](https://help.shopify.com/themes/liquid/basics), como layout principal de otro de nivel superior:
+Existen infinitas opciones para desempeñar tareas relacionadas con la *producción* al desarrollar un sitio con la herramienta *Jekyll*, y una de estas opciones es, en este caso, no hacer uso de ninguna herramienta externa para realizar una **compresión del código HTML**. Existe una forma muy sencilla para hacerlo sin recurrir a plugins gracias a [Liquid](https://help.shopify.com/themes/liquid/basics):
+
+### Crear un nuevo layout
 
 ```sh
 cd _layouts
 touch comprimir.html
 ```
 
-### comprimir.html
+##### `_layouts/comprimir.html`
 ```md
 ---
 #
@@ -31,7 +33,7 @@ touch comprimir.html
 {% endraw %}
 ```
 
-Ahora haz referencia a `comprimir.html` en cualquier layout de nivel superior, como por ejemplo en `_layouts/default.html`
+Ahora tan sólo queda hacer referencia a `comprimir.html` en cualquier layout de nivel superior, como por ejemplo en `_layouts/default.html`
 
 ```md
 ---
