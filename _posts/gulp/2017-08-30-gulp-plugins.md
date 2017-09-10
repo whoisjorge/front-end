@@ -1,15 +1,12 @@
 ---
 layout      : post
 
-title       : Lista de plugins útiles para Gulp
+title       : Una lista de plugins para empezar con Gulp
 description :
 
 category    : gulp
 tags        : cheatsheet collection
 ---
-
-{: .info-box }
-Esta página está incompleta. [¡Envía tus cambios a través de GitHub!]()
 
 - gulp-ruby-sass
 - gulp-autoprefixer
@@ -22,7 +19,7 @@ Esta página está incompleta. [¡Envía tus cambios a través de GitHub!]()
 - gulp-clean
 - gulp-cache
 
-#### Referencias
+#### Notas
 
 - https://gulpjs.com/plugins/
 - https://www.npmjs.com/

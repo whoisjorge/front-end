@@ -7,7 +7,7 @@ permalink: /colabora/
 Si estás pensando en colaborar con este proyecto y enviar contribuciones al repositorio, échale un vistazo a esta pequeña guía de estilo sobre cómo "estructurar" nuevo contenido. El sitio está enteramente creado con *Jekyll* por lo que todos los artículos se escriben utilizando [markdown](https://jekyllrb.com/docs/posts/).
 
 {: .info-box .success}
-También puedes enviar tus contribuciones [directamente](https://github.com/whoisjorge/front-end/issues/new?title=Nueva%20solicictud:%20_CARACTERISTICA_) a través del repositorio en GitHub.
+También puedes enviar tus contribuciones [directamente](https://github.com/whoisjorge/front-end/issues/new?title=Nueva%20solicitud:%20_CARACTERISTICA_) a través del repositorio en GitHub.
 
 
 
