@@ -1,5 +1,10 @@
 <nav class="navbar">
-  <section class="navbar-item centered">
+
+  <section class="navbar-section">
+      <a class="home back-button" href="."></a>
+  </section>
+
+  <section class="navbar-center">
     <div class="popover popover-bottom">
       <!-- logo -->
       <span><a class="site-title" href="{{ "/" | relative_url }}">
@@ -14,4 +19,14 @@
       </aside>
     </div>
   </section>
+
+  <section class="navbar-section">
+    {% if page.layout contains 'post' %}
+    <span class="chip">
+      <img src="{% asset_path svgicons/github.svg %}" alt="Editar en GitHub" width="14px" />
+        <a class="tooltip tooltip-bottom" href="{{site.gh_repo}}blob/master/{{ page.path | remove: '.html' }}" data-tooltip="Edita esta página en GitHub" role="button">Editar</a>
+    </span>
+    {% endif %}
+  </section>
+
 </nav>

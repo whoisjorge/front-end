@@ -277,14 +277,11 @@ article.page
     .site-description
         font-size: 1.5rem
         font-weight: lighter
-        em
-            font-weight: 400
-            font-style: bold
         small
-            text-align: center
             sub
                 color: $primary-color-light
                 font-weight: 700
+                bottom: -.65em
                 &::after, &::before
                     content: ""
                     display: inline-block
@@ -295,7 +292,7 @@ article.page
                     margin: 0 10px
         .label
             line-height: 1.25
-            padding: 1rem .5rem
+            padding: 1.25rem .75rem
 
 
     // Popover
@@ -308,6 +305,39 @@ article.page
             border-radius: 0
             box-shadow: 0 0.4rem 1rem rgba(69, 77, 93, .3)
 
+
+
+    // Editar en GitHub
+    .chip
+        background: #343436
+        font-size: 1.2rem
+        padding: 0 .8rem 0 .6rem
+        margin-left: .4rem
+        height: 2.3rem
+        border-radius: 1rem
+        border-top-right-radius: .2rem
+        border-bottom-right-radius: .2rem
+        a
+            text-decoration: none
+            color: white
+        img
+            margin-right: .7rem
+            filter: invert(1)
+
+        .tooltip.tooltip-bottom
+            &::after
+                font-size: 1rem
+            &:hover
+                &:after
+                    transform: translate(-75%, 3rem)
+            &:focus
+                &:after
+                    display: none
+        &:hover
+            background: #4d4d50
+
+        +mobile
+            display: none
 
 
 /* home.html
@@ -337,8 +367,8 @@ a.grid-item__link
 // Invertir el color de los svgicon
 .grid-item__link svg
     filter: invert(1)
-    width: 48px
-    height: 48px
+    width: 52px
+    height: 52px
 
 .grid-item__title
     font-weight: 300
@@ -535,3 +565,5 @@ input:focus:-ms-input-placeholder
         position: absolute
         bottom: .9rem
         right: -2.2rem
+        +mobile
+            display: none
