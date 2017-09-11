@@ -1,6 +1,6 @@
-# production
 _site/
 dist/
+CNAME
 
 # dependencias
 node_modules/
