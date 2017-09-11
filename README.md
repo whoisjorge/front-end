@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://front-end.js.org">
-    <img width="100" src="./docs/teaser.png" alt="logo">
+    <img width="666" src="./docs/teaser.png" alt="logo">
   </a>
   <br><br>
   👉 <b><a href="https://front-end.js.org">Front-end.JS.ORG!</a> </b> ✨
