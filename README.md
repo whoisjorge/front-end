@@ -1,6 +1,6 @@
 # Front-end <small><i>cheatsheets</i></small>
 
-> Una __colección de publicaciones__ de código abierto con apuntes acerca de distintas tecnologías sobre desarrollo web front-end — _y lenguajes de programación en general_ —  organizadas de forma sintética y muy descriptiva.
+> Una __colección de publicaciones__ con artículos/apuntes sobre distintas tecnologías o herramientas de __desarrollo web front-end__ — _y lenguajes de programación en general_ —  organizados de forma sintética y muy descriptiva.
 
 <br>
 
