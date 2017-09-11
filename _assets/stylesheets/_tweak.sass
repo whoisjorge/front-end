@@ -1,25 +1,20 @@
 main
-    margin: 10rem 0 8rem 0
+    margin: 10rem 0 0 0
     min-height: 1080px
-
-
-
 
 
 /*  General
  * ------------------------------------------------------------ */
 body
     font-family: "CheatsheetSans", $body-font-family
+    background: $bg-color
     line-height: 1.6
     font-weight: 300
 
 header, footer
     text-align: center
 
-figure
-    margin: 0
-
-blockquote
+figure, blockquote
     margin: 0
 
 input, img
@@ -61,7 +56,7 @@ pre
 
 
 
-/*  ARTICLE
+/*  ARTICLE  - jungle
  * ------------------------------------------------------------ */
 article
     padding: 0 20px
@@ -210,7 +205,8 @@ article.page
 
 /* multiple: ultimas-actualizaciones | categoria |.html  */
 .post-index
-    padding: 9rem 2.5rem 12rem 2.5rem
+    padding: 6rem 2.5rem 8rem 2.5rem
+
     a
         color: #454d5d
 
@@ -235,7 +231,6 @@ article.page
 
 .table tr:hover .tag
     color: #acb3c2
-
 
 
 
@@ -365,7 +360,7 @@ article.page
     list-style: none
 .grid-item
     padding: 2rem .5rem 1rem .5rem
-    border-right: 10px solid #fff
+    border-right: 10px solid $bg-color
     background-clip: padding-box
 a.grid-item__link
     color: #fff
@@ -437,59 +432,36 @@ a.grid-item__link
  * site-footer.html
  * -------------------------------------------------- */
 .footer-links
-    // background: $bg-color
-    padding: 2rem
+    padding: 4rem
     h6
+        float: right
         font-weight: 300
         line-height: 2
         a
             margin: 0 1rem
+        +tablet
+            float: none
         +mobile
+            float: none
             font-size: 1em
 
     .licenses
-        font-style: italic
+        font-size: 1.5rem
+        text-align: left
         font-weight: 100
         line-height: 1.5
         +mobile
             font-size: 1rem
+            text-align: center
         +tablet
-            font-size: 1.5rem
+            font-size: 1.25rem
+            text-align: center
         +large
-            font-size: 1.75rem
+            font-size: 2rem
 
-a.auth
-    font-weight: lighter
-    font-variant: small-caps
-    font-size: 14px
-    &:hover
-        text-decoration: none
-
-.copy-left
-
-    transform: scaleX(-1)
-    filter: FlipH
-
-
-
-
-/*
- * sitemap.html
- * -------------------------------------------------- */
-.sitemap h1
-    visibility: hidden
-    display: none
-.sitemap ul li
-    margin: 0
-    padding: 0
-.robots
-    font-style: italic
-    margin: 6rem 0
-    text-align: center
-
-
-
-
+.enlaces
+    padding: 0 4rem 3.5rem 4rem
+    margin: 0 0 4rem 0
 
 
 
@@ -503,7 +475,7 @@ a.auth
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *
- *                       COMPONENTES
+ *                       "COMPONENTES"
  *
  * * * * * * * * * * * * * * * * * * * * * * * * * * **/
 
@@ -525,7 +497,7 @@ a.auth
  * filtrar-busqueda.html
  * -------------------------------------------------- */
 .filtrar-categorias
-    padding: 2rem 20px 0 20px
+    padding: 0 20px 0 20px
     h3
         font-weight: 300
         text-align: center
@@ -546,13 +518,22 @@ input:focus:-ms-input-placeholder
  * open-source.html
  * -------------------------------------------------- */
 .empty
-    background: $secondary-color-light
+    margin-top: 8rem
+    background: $body-bg
     +mobile
         padding: 4rem .75rem
 
-.empty-icon svg
-    width: 92px
-    height: 92px
+    .empty-subtitle
+        margin-top: 1rem
+    .empty-icon svg
+        width: 118px
+        height: 118px
+        +mobile
+            width: 92px
+            height: 92px
+
+    .empty-action
+        margin-top: 2.5rem
 
 
 
@@ -586,3 +567,15 @@ input:focus:-ms-input-placeholder
         right: -2.2rem
         +mobile
             display: none
+
+
+
+
+#particles-js
+    position: fixed
+    bottom: 0
+    top: 0
+    background-color: $bg-color
+    width: 100%
+    height: 100%
+    z-index: -99
