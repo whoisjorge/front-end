@@ -11,7 +11,14 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="format-detection" content="telephone=no">
 
-  {% css main inline %}
+  {% css main %}
+
+  {% comment %}
+    <style>
+      {% asset_source main.css %}
+    </style>
+  {% endcomment %}
+
 
   <link rel="shortcut icon" href="{{ "/favicon.ico" | relative_url }}" type="image/x-icon">
   <link rel="icon" sizes="32x32" href="{% asset_path ico/favicon-32x32.png %}">

@@ -8,6 +8,11 @@
   zoom:1;
   &:after{ content:""; clear:both; display:table; }
 
+
+  &.grid-1280 {
+    max-width: 128rem + 2 * $layout-padding;
+  }
+
   &.grid-960 {
     max-width: 96rem + 2 * $layout-padding;
   }

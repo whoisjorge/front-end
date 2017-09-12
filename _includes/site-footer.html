@@ -7,79 +7,39 @@
   {% include componentes/actualizaciones.html %}
 
 
-  <!-- Enlaces Interesantes -->
+
+  <!-- Tarjetas de Enlaces -->
   {% include componentes/enlaces.html %}
+
+
 
 {% endif %}
 
 
-<section class="enlaces container">
+
+<section class="container grid-1280 footer-info">
   <div class="columns">
 
+    <div class="column col-12 col-md-12">
+      <sub><b>Agradecimientos a:</b></sub>
+        <a href="https://js.org" target="_blank" title="JS.ORG | JavaScript Community">
+          <img src="https://logo.js.org/dark_horz.png" width="92" alt="JS.ORG Logo"/>
+        </a> <!-- alternatives [bright|dark]_[horz|vert|tiny].png (width[horz:102,vert:50,tiny:77]) -->
 
-      <div class="column col-4 col-sm-12">
-        <div class="card">
-          <header class="card-header">
-            <div class="card-title h6">Spectre Twitter</div>
-          </header>
+      <small>Snippets de código fuente con licencia open source <a href="#mit-license">MIT</a>, salvo mención.</small>
+      <small>Contenido del sitio disponible bajo la licencia Creative Commons (<a href="https://creativecommons.org/licenses/by/4.0/deed.es_ES" target="_blank">CC BY 4.0</a>).</small>
+    </div>
 
-          <section class="card-body">
-            For the latest announcements and updates, follow on Twitter: <a href="https://twitter.com/spectrecss" target="_blank">@spectrecss</a>.
-          </section>
 
-          <footer class="card-footer">
-            <a href="https://twitter.com/spectrecss" class="btn btn-primary" target="_blank">Follow</a>
-          </footer>
-        </div>
-      </div>
+    <div class="column">
+        <h6>
+          <a href="{{ "/sitemap" | relative_url }}">•</a>
+        </h6>
+    </div>
 
-      <div class="column col-4 col-sm-12">
-        <div class="card">
-                <div class="card-header">
-                  <div class="card-title h6">PayPal Donate</div>
-                </div>
-                <div class="card-body">
-                  Spectre.css is completely free to use. If you enjoy it, please consider donating for the further development. ♥
-                </div>
-                <div class="card-footer">
-                  <a href="https://www.paypal.me/picturepan2" class="btn btn-primary" target="_blank">Donate</a>
-                </div>
-        </div>
-      </div>
 
-      <div class="column col-4 col-sm-12">
-        <div class="card">
-                <div class="card-header">
-                  <div class="card-title h6">Spectre Docs</div>
-                </div>
-                <div class="card-body">
-                    Spectre Docs experience has been completely rewritten and improved.
-                </div>
-                <div class="card-footer">
-                  <a href="getting-started.html" class="btn btn-primary">Explore</a>
-                </div>
-        </div>
-      </div>
 
   </div>
-</section>
-
-
-
-
-<section class="footer-links">
-  <h6>
-    <a href="{{ "/contribuciones" | relative_url }}">colabora </a> •
-    <a href="{{ "/sitemap" | relative_url }}">sitemap</a> •
-    <a href="https://github.com/whoisjorge">autor</a>
-  </h6>
-
-  <div class="licenses">
-    <small>Snippets de código fuente con licencia open source <a href="#mit-license">MIT</a>.</small>
-    <br>
-    <small>Contenido del sitio disponible bajo la licencia Creative Commons (<a href="https://creativecommons.org/licenses/by/4.0/deed.es_ES" target="_blank">CC BY 4.0</a>).</small>
-  </div>
-
 </section>
 
 

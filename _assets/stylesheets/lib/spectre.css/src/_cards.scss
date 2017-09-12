@@ -12,7 +12,8 @@
     padding-bottom: 0;
 
     &:last-child {
-      padding-bottom: $layout-padding-lg;
+      padding-bottom: 2rem;
+      padding-top: $layout-padding-lg;
     }
   }
 

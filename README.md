@@ -15,7 +15,6 @@
 <br>
 
 
-
 ## Un proyecto Open Source
 Se trata de una **iniciativa de _código abierto_**, por lo que tanto el código fuente de este repositorio como el contenido del sitio es de libre utilización y/o modificación según los términos de la [licencia](/LICENSE):
 

@@ -47,7 +47,7 @@ comments: false
 
 ### Fechas
 
-Los nombres de los ficheros que contienen los artículos, deben comenzar siempre con la fecha de última modificación:
+Pese a tratarse de una colección de publicaciones, al escribir sobre tecnología — o *software*, es de gran relevancia la **fecha de referencia**. Por ello todos los nombres de los ficheros que contienen los artículos deben comenzar siempre con la fecha de última modificación:
 
 ```md
 2017-12-25-feliz-navidad.md
@@ -91,8 +91,9 @@ Puedes resaltar cierta información utilizando cajas:
 {: .info-box}
 Aquí va el texto a resaltar.
 
-# Existen 2 clases específicas
-.success  |  .warning   >   {: .info-box .warning}
+# Existen 3 clases específicas
+.success  .warning  .hint
+>   {: .info-box .warning}
 ```
 
 {: .info-box .warning}
