@@ -37,6 +37,8 @@ Estos son algunos recursos _open source_ increíbles que han sido incluídos de 
 
 - [Simple Icons] — Un excelente repositorio de **_Iconos .svg_**, ¡y de dominio público! 🐋
 - [Spectre.css] — Ligero y minimalista **_Framework CSS_**
+
+## Agradecimiento especial
 - [JS.org] — Una comunidad dedicada a los desarrolladores **_JavaScript_**
 
 
