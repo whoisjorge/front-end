@@ -1,4 +1,4 @@
-# Front-end <small><i>cheatsheets</i></small>
+# Front-end
 
 > Una __colección de publicaciones__ con artículos/apuntes sobre distintas tecnologías o herramientas de __desarrollo web front-end__ — _y lenguajes de programación en general_ —  organizados de forma sintética y muy descriptiva.
 
@@ -9,7 +9,7 @@
     <img width="666" src="./docs/teaser.png" alt="logo">
   </a>
   <br><br>
-  👉 <b><a href="https://front-end.js.org">Front-end.JS.ORG!</a> </b> ✨
+  ✨ <b><a href="https://front-end.js.org"><small><i>Front-end cheatsheets</i></small></a> </b> ✨
 </p>
 
 <br>
@@ -37,7 +37,7 @@ Estos son algunos recursos _open source_ increíbles que han sido incluídos de 
 
 - [Simple Icons] — Un excelente repositorio de **_Iconos .svg_**, ¡y de dominio público! 🐋
 - [Spectre.css] — Ligero y minimalista **_Framework CSS_**
-- [JS.org] — Una comunidad dedicada a los desarrolladores **JavaScript**
+- [JS.org] — Una comunidad dedicada a los desarrolladores **_JavaScript_**
 
 
 
