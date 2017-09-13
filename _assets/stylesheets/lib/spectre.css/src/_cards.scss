@@ -13,7 +13,7 @@
 
     &:last-child {
       padding-bottom: 2rem;
-      padding-top: $layout-padding-lg;
+      padding-top: 2rem;
     }
   }
 
@@ -39,6 +39,7 @@
 
   .card-title {
     font-size: 2rem;
+    font-weight: 400;
   }
 
   .card-subtitle {

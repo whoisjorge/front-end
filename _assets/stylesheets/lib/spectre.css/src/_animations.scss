@@ -18,3 +18,40 @@
     transform: translateY(0);
   }
 }
+
+
+
+/*
+ * Rainbow button + animation
+ */
+.btn-rainbow {
+  color: #fff;
+  border: 1px solid transparent;
+  animation: rainbow 8s ease infinite;
+  background-image: linear-gradient(129deg, #FF3898, #ff3860, #b86bff, #3273dc);
+  background-size: 666% 666%;
+  &:hover, &:focus {
+    color: #fff;
+    background-image: linear-gradient(129deg, #FF3898, #ff3860, #b86bff, #3273dc);
+    background-size: 666% 666%;
+    border-color: transparent;
+    // color: black;
+    // background-color: white;
+    // border: 1px solid $gray-color;
+    // transform-origin: center center;
+    // transition: transform 86ms ease-out;
+
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 80%;
+  }
+  50% {
+    background-position: 100% 20%;
+  }
+  100% {
+    background-position: 0% 80%;
+  }
+}
