@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Envía tus contribuciones al repositorio de este proyecto
-permalink: /contribuciones/
+title: Colabora con este proyecto a través del repositorio en GitHub
+permalink: /contribuyendo/
 ---
 
 {: .text-center}
