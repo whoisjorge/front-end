@@ -22,6 +22,7 @@ repository                : whoisjorge/front-end
 title                     : Front-end
 description               : Una colección de snippets y apuntes sobre tecnología, desarrollo web front-end y lenguajes de programación
 gh_repo                   : https://github.com/whoisjorge/front-end/
+gh_autor                  : https://github.com/whoisjorge/
 
 # External
 google_analytics:
