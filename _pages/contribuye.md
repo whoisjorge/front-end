@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Colabora con este proyecto a través del repositorio en GitHub
-permalink: /contribuyendo/
+permalink: /contribuye/
 ---
 
 {: .text-center}

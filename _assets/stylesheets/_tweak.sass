@@ -445,36 +445,30 @@ a.grid-item__link
         display: block
         +mobile
             font-size: 60%
+    .column
+        padding-top: 0
 
 
 
+// .footer-circle
+//     position: absolute
+//     left: 50%
+//     margin-left: -100px
 
-    // h6
-    //     float: right
-    //     font-weight: 300
-    //     line-height: 2
-    //     a
-    //         margin: 0 1rem
-    //     +tablet
-    //         float: none
-    //     +mobile
-    //         float: none
-    //         font-size: 1em
+//     width: 200px
+//     height: 200px
+//     text-align: center
+//     border-radius: 100%
+//     overflow: hidden
+//     background: rgba(191, 30, 44, .8)
+//     z-index: -99
+//     animation: grow 5s
 
-    // .licenses
-    //     font-size: 1.5rem
-    //     text-align: left
-    //     font-weight: 100
-    //     line-height: 1.5
-    //     +mobile
-    //         font-size: 1rem
-    //         text-align: center
-    //     +tablet
-    //         font-size: 1.25rem
-    //         text-align: center
-    //     +large
-    //         font-size: 2rem
-
+// @ keyframes grow
+//     0%
+//         transform: scale(0)
+//     100%
+//         transform: scale(1)
 
 
 
@@ -491,6 +485,26 @@ a.grid-item__link
     padding: 0 2rem 4rem 2rem
     .card
         background: $bg-color
+    // Star
+    .column
+        &:nth-child(1)
+            .card
+                background: none
+                border: none
+                margin-top: 3rem
+                +mobile
+                    margin-top: -4.5rem
+                    margin-bottom: 2rem
+                    background: none
+                    border: none
+                +tablet
+                    margin-top: -4.5rem
+                    margin-bottom: 2rem
+                    background: none
+                    border: none
+
+
+
 
 
 
