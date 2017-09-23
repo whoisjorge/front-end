@@ -14,8 +14,6 @@ A la hora de preparar el sitio para producción, es posible desplegar (*deploy*)
 
 ### Configuración
 
-Crea un fichero ...
-
 ##### `.travis.yml`
 
 ```yml
