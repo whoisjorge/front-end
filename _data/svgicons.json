@@ -92,7 +92,7 @@
         },
         {
             "title": "CodePen",
-            "hex": "000000"
+            "hex": "0c0c0c"
         },
         {
             "title": "Meteor",
@@ -193,6 +193,22 @@
         {
             "title": "macOS X",
             "hex": "999999"
+        },
+        {
+            "title": "Django",
+            "hex": "092E20"
+        },
+        {
+            "title": "Shopify",
+            "hex": "7AB55C"
+        },
+        {
+            "title": "Netlify",
+            "hex": "00C7B7"
+        },
+        {
+            "title": "MySQL",
+            "hex": "4479A1"
         }
     ]
 }
