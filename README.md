@@ -9,7 +9,7 @@
     <img width="666" src=".github/teaser.png" alt="logo">
   </a>
   <br><br>
-  ✨ <b><a href="https://front-end.js.org"><small><i> ACCEDER </i></small></a> </b> ✨
+  ✨ <b><a href="https://front-end.js.org"><small><i> front-end.js.org </i></small></a> </b> ✨
 </p>
 
 <br>
@@ -45,9 +45,9 @@ Estos son algunos recursos _open source_ increíbles que han sido incluídos de 
 <br>
 
 
-## Envía tus contribuciones
+## Contribuciones
 
-🎉 __En primer lugar, muchas gracias por considerar contribuir a este repositorio.__
+🎉 __En primer lugar, muchas gracias por considerar enviar contribuciones a este repositorio.__
 
 Si encuentras algún bug o quieres contribuir al código, puedes ayudar enviando un [reporte](https://github.com/whoisjorge/front-end/issues) o hacer directamente [pull request](https://github.com/whoisjorge/front-end/pulls). Para más información visita [CONTRIBUTING.md](/.github/CONTRIBUTING.md)
 
@@ -57,14 +57,15 @@ Si encuentras algún bug o quieres contribuir al código, puedes ayudar enviando
 
 
 
+
+
+
+
 <!-- Thanks for watching! -->
 <br><br><br><br>
 <p align="center"> <sub><sup>&lt;/&gt;</sub></sup><br>
   <sub><sup>Una iniciativa de <a href="http://www.whoisjorge.me">@whoisjorge</a></sup></sub>
 </p>
-
-
-
 
 
 <!-- Link ref. -->

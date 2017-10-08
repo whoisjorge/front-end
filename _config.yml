@@ -8,21 +8,16 @@ email: email@whoisjorge.me
 lang                      : es
 url                       : https://front-end.js.org
 
-# GitHub metadata
-# https://help.github.com/articles/repository-metadata-on-github-pages/
-repository                : whoisjorge/front-end
-
-
-# Desarrollo en http://localhost:4000/front-end/
-# Añadido con comando: `bundle exec jekyll serve --baseurl /front-end` -> npm run dev
-# baseurl                   : /front-end
-
-
 # Información Básica
 title                     : Front-end
 description               : Una colección de snippets y apuntes sobre tecnología, desarrollo web front-end y lenguajes de programación
 gh_repo                   : https://github.com/whoisjorge/front-end/
 gh_autor                  : https://github.com/whoisjorge/
+
+# GitHub metadata
+# https://help.github.com/articles/repository-metadata-on-github-pages/
+repository                : whoisjorge/front-end
+
 
 # External
 google_analytics:
@@ -42,6 +37,7 @@ markdown                  : kramdown
 highlighter               : rouge
 lsi                       : false
 excerpt_separator         : "\n\n"
+
 
 
 # Gemas
@@ -74,3 +70,13 @@ exclude:
   - package-lock.json
   - README.md
   - LICENSE
+
+
+
+# # # # @
+# Notas @
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Desarrollo en http://localhost:4000/front-end/
+# Añadido con comando: `bundle exec jekyll serve --baseurl /front-end` -> npm run dev
+# baseurl                   : /front-end
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
