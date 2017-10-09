@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/whoisjorge/front-end/issues"
   },
-  "main": "!gulpfile.js",
+  "private": true,
   "scripts": {
     "start": "bundler install && npm install",
     "dev": "bundle exec jekyll serve --baseurl /front-end",
@@ -32,7 +32,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     ":dev": "gulp"
   },
-  "private": true,
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "clean-css": "^4.1.7",

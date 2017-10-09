@@ -1,16 +1,18 @@
+# Jekyll config.
+
+
 # Feed / Atom
 domain: front-end.js.org
 author: Jorge Moliner
 email: email@whoisjorge.me
 
 
-# Configuración
+# Información del Sitio
 lang                      : es
-url                       : https://front-end.js.org
-
-# Información Básica
+url                       : https://front-end.js.or
 title                     : Front-end
 description               : Una colección de snippets y apuntes sobre tecnología, desarrollo web front-end y lenguajes de programación
+
 gh_repo                   : https://github.com/whoisjorge/front-end/
 gh_autor                  : https://github.com/whoisjorge/
 
