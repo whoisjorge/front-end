@@ -181,12 +181,6 @@ console.log('¡Funciona!');
 
 ---
 
-<p align="center">
-<a href="https://github.com/whoisjorge/front-end/blob/master/docs/CONTRIBUTING.md">CONTRIBUTING.md</a>
-</p>
-
----
-
 👻 💃 🐊 🍪 🤘 🐒 👋 🦄 😎 🐌 🤓 🎩 👉 🌵 🐘 💣 🐳 👾 🕷 🐼 💪 🐷 ✨ 🚀 🍄 🌈 🐸 🎭 🌟 🐙 ⚡ 🌴 🌶 🤖 ☁ 👽 🧀 🔥 🐢 🍕 🐟 🐿 🍿 🐪 🎮 🐻 🚣‍
 
-
+---
