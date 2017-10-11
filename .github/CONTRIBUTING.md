@@ -21,9 +21,9 @@ Principalmente asegúrate de poder utilizar [Ruby] y [Git] en un terminal. Con e
 2. Clona el repositorio y ejecuta `bundle install`
 3. Ejecuta: `bundle exec jekyll serve`
 
-Así habrás iniciado un servidor de desarrollo en `localhost:4000/front-end/`.
+Así habrás iniciado un servidor de desarrollo en `localhost:4000`.
 
-Para un entorno con **Browsersync**:
+#### Con **npm**:
 
 1. Instala [Node.js] y [npm]
    * Para actualizar _npm_ a la última version `npm install npm@latest -g`
