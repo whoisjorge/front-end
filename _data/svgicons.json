@@ -3,6 +3,10 @@
   "icons":
     [
         {
+           "title": "Ruby on Rails",
+           "hex": "CC0000"
+        },
+        {
             "title": "Vue.js",
             "hex": "4FC08D"
         },
