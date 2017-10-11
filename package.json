@@ -22,7 +22,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "bundler install && npm install",
+    "start": "bundler install && npm install && npm run dev",
     "dev": "bundle exec jekyll serve --baseurl /front-end",
     "clean": "bundle exec jekyll clean && rm -rf .asset-cache/",
     "build": "JEKYLL_ENV=production bundle exec jekyll build",
