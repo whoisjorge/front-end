@@ -3,8 +3,8 @@
   "icons":
     [
         {
-           "title": "Ruby on Rails",
-           "hex": "CC0000"
+            "title": "Ruby on Rails",
+            "hex": "CC0000"
         },
         {
             "title": "Vue.js",
@@ -17,6 +17,14 @@
         {
             "title": "WordPress",
             "hex": "21759B"
+        },
+        {
+            "title": "Hexo",
+            "hex": "0E83CD"
+        },
+        {
+            "title": "Haskell",
+            "hex": "5D4F85"
         },
         {
             "title": "Windows",
