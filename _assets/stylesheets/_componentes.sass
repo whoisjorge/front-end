@@ -149,6 +149,86 @@
 
 
 
+/*
+ * breadcrumbs.html
+ * -------------------------------------------------- */
+.breadcrumb
+    text-align: center
+    user-select: none
+    .breadcrumb-item a
+        font-weight: lighter
+        &:hover
+            text-decoration: none
+
+
+
+/*
+ * filtrar-busqueda.html
+ * -------------------------------------------------- */
+.filtrar-categorias
+    padding: 0 20px 0 20px
+    h3
+        font-weight: 300
+        text-align: center
+        margin-bottom: 3rem
+.form-input
+    height: 3.6rem
+
+// Elimina el placeholder
+input:focus::-webkit-input-placeholder
+    color: transparent
+input:focus::-moz-placeholder
+    color: transparent
+input:focus:-ms-input-placeholder
+    color: transparent
+
+
+
+/*
+ * open-source.html
+ * -------------------------------------------------- */
+.empty
+    margin-top: 8rem
+    background: $bg-color
+    +mobile
+        padding: 4rem .75rem
+
+    .empty-subtitle
+        margin-top: 1rem
+    .empty-icon svg
+        width: 118px
+        height: 118px
+        +mobile
+            width: 92px
+            height: 92px
+
+    .empty-action
+        margin-top: 2.5rem
+
+
+
+/*
+ * footer-cards.html
+ * -------------------------------------------------- */
+.enlaces
+    padding: 4rem 2rem 4rem 2rem
+    .card
+        background: $bg-color
+    .star
+        margin-top: 7rem
+        +mobile
+            margin-top: 0
+        +tablet
+            margin-top: 0
+        .card
+            background: none
+            border: none
+            .card-body
+                padding-top: 2.5rem
+
+
+
+
 
 
 /*

@@ -64,7 +64,7 @@ Si encuentras algún bug o quieres contribuir al código, puedes ayudar enviando
 <!-- Thanks for watching! -->
 <br><br><br><br>
 <p align="center"> <sub><sup>&lt;/&gt;</sub></sup><br>
-  <sub><sup>Una iniciativa de <a href="http://www.whoisjorge.me">@whoisjorge</a></sup></sub>
+  <sub><sup><a href="http://www.whoisjorge.me">@whoisjorge</a></sup></sub>
 </p>
 
 
