@@ -9,6 +9,8 @@ tags        : cheatsheet snippets
 
 ---
 
+<code style="font-size: 1rem"> v2.5.1 </code>
+
 [Axios](https://github.com/mzabriskie/axios) es una librería JavaScript que actúa como *cliente HTTP* basado en Promesas. Permite la interactividad con *AJAX* de forma asíncrona en una aplicación web, tanto en la parte del Front-end como en la del Back-end mediante [Node.js](https://nodejs.org).
 
 ### Instalacion
@@ -75,7 +77,7 @@ Es necesario el uso de una [API Key](https://steamcommunity.com/dev/apikey) para
 
 ### API Proxying durante el desarrollo
 
-Durante la integración con un backend existente, una necesidad común es acceder a éste cuando se usa un servidor de desarrollo. Para lograrlo es posible ejecutar el servidor de desarrollo y el back-end de la API de forma remota, y dejar que el servidor de desarrollo haga un _proxy_ de todas las solicitudes de la API al back-end real.
+Durante la integración con un back-end existente, una necesidad común es acceder a éste cuando se usa un servidor de desarrollo. Para lograrlo es posible ejecutar el servidor de desarrollo y el back-end de la API de forma remota, y dejar que el servidor de desarrollo haga un _proxy_ de todas las solicitudes de la API al back-end real.
 
 ---
 

@@ -8,20 +8,20 @@ category    : github
 tags        : comandos github fork
 ---
 
-Los cambios que se hacen a un repositorio no transmiten automáticamente sus actualizaciones a las copias derivadas — o *forks*, y lo mismo sucede de forma inversa: las modificaciones que se hacen en las copias tampoco se transmiten automáticamente al repositorio de origen.
+Los cambios que se hacen a un repositorio no transmiten automáticamente sus actualizaciones a las copias derivadas — o *forks*. Es por ello que, en ocasiones, puede resultar de utilidad el hecho de trabajar sobre una copia sincronizada con el repositorio original.
 
-### Clonar una copia del repositorio
+### Clonar la copia del repositorio
 
 ```bash
 # Fork it!
-git clone git@github.com:USUARIO/FORKED-REPO.git
+git clone git@github.com:TU_USUARIO/FORKED_REPO.git
 ```
 
 ### Sincronizar copia con el repositorio original
 
 ```sh
-cd FORKED-REPO
-git remote add upstream git://github.com/DEV-USUARIO/ORIGINAL-FORKED-REPO.git
+cd FORKED_REPO
+git remote add upstream git://github.com/ORIGINAL_DEV/ORIGINAL_REPO.git
 git fetch upstream
 ```
 

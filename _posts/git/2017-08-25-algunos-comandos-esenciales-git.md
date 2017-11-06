@@ -1,8 +1,8 @@
 ---
 layout      : post
 
-title       : Comandos esenciales Git
-description : Una lista con los comandos esenciales a la hora de utilizar un repositorio Git
+title       : Algunos comandos esenciales Git
+description : Una lista con algunos de los comandos más esenciales a la hora de utilizar un repositorio Git
 
 category    : git
 tags        : comandos esenciales
