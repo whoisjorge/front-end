@@ -1,13 +1,12 @@
+# build
+dist
+_site
 CNAME
 
-_site/
-dist/
-
 # dependencias
-node_modules/
+node_modules
 package-lock.json
-Gemfile.lock
-Yarn.lock
+*.lock
 
 # cache & misc.
 .asset-cache
