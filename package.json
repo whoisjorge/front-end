@@ -1,35 +1,22 @@
 {
   "name": "front-end",
-  "description": "Código Fuente del repositorio: whoisjorge/front-end",
-  "version": "0.0.1",
-  "keywords": [
-    "front-end",
-    "cheatsheets",
-    "snippets",
-    "open-source",
-    "jekyll",
-    "gh-pages"
-  ],
-  "license": "MIT",
-  "author": "Jorge Moliner <email@whoisjorge.me>",
-  "homepage": "https://front-end.js.org",
+  "description": "Una colección de apuntes sobre desarrollo web",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/whoisjorge/front-end.git"
   },
-  "bugs": {
-    "url": "https://github.com/whoisjorge/front-end/issues"
-  },
+  "author": "Jorge Moliner <email@whoisjorge.me>",
+  "homepage": "https://front-end.js.org",
   "private": true,
   "scripts": {
     "start": "bundler install && npm install && npm run dev",
     "dev": "bundle exec jekyll serve --baseurl /front-end",
-    "clean": "bundle exec jekyll clean && rm -rf .asset-cache/",
+    "clean": "bundle exec jekyll clean && rm -rf .asset-cache/ Gemfile.lock package-lock.json yarn.lock",
     "build": "JEKYLL_ENV=production bundle exec jekyll build",
     "watch": "bundle exec jekyll serve --skip-initial-build",
     ":prod": "gulp :prod",
     "DEPLOY": " 🦄 git subtree push --prefix dist origin gh-pages ",
-    "test": "echo \"Error: no test specified\" && exit 1",
     ":dev": "gulp"
   },
   "devDependencies": {
