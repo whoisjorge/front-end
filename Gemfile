@@ -1,17 +1,12 @@
-ruby '2.4.1'
 source "https://rubygems.org"
 
 # ¡Aquí es donde se administra la versión de Jekyll del sitio!
-# Cuando desees utilizar una versión diferente, cámbiala a continuación,
-# guarda el archivo y ejecuta `bundle install`. Ejecuta Jekyll mediante
-# el comando `bundle exec`, por ejemplo:
-#
-#     bundle exec jekyll build --watch
-#     bundle exec jekyll serve
-#
-gem "jekyll", "3.5.0"
 
-# Jekyll PLUGINS
+# Cuando desees utilizar una versión diferente, cámbiala a 
+# continuación, guarda el archivo y ejecuta `bundle install`
+gem "jekyll", "3.6.3"
+
+# Plugins
 group :jekyll_plugins do
    gem "jekyll-assets", "~> 2.3.2"
    gem "uglifier", "~> 3.2.0"
@@ -25,7 +20,6 @@ end
 
 # En Windows no se incluyen archivos de información de zona
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
