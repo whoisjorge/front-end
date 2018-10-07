@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  - 2.5.0
+script:
+  - bundle exec jekyll build
+cache:
+  directories:
+    - node_modules
+    - _site
