@@ -1,4 +1,13 @@
-# Jekyll config.
+#           _____                         #
+#          (, /     /)       /) /)        #
+#            /   _ (/_      // //         #
+#        ___/___(/_/(__(_/_(/_(/_         #
+#      /   /          .-/                 # 
+#     (__ /          (_/                  #
+#                                         #
+# Configuration, see:                     #
+# https://jekyllrb.com/docs/configuration/
+
 
 
 # Feed / Atom
@@ -9,7 +18,7 @@ email: email@whoisjorge.me
 
 # Información del Sitio
 lang                      : es
-url                       : https://front-end.js.or
+url                       : https://front-end.js.org
 title                     : Front-end
 description               : Una colección de snippets y apuntes sobre tecnología, desarrollo web front-end y lenguajes de programación
 
@@ -44,7 +53,6 @@ excerpt_separator         : "\n\n"
 
 # Gemas
 plugins:
-  #
   # https://github.com/jekyll/jekyll-assets
   - jekyll-assets
   #

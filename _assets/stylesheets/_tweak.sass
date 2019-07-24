@@ -1,191 +1,176 @@
 /*  General Tweaks
  * ------------------------------------------------------------ */
 body
-    font-family: "CheatsheetSans", $body-font-family
-    line-height: 1.6
-    font-weight: 300
+  font-family: "CheatsheetSans", $body-font-family
+  line-height: 1.6
+  font-weight: 300
 
-header, footer
-    text-align: center
-
-// figure, blockquote
-//     margin: 0
+strong
+  font-weight: 500
 
 input, img
-    user-select: none
-
-// What?
-code
-    padding: 2px 4px
-    color: #e06870
-    background-color: #fdf4f4
-    border-radius: .1rem
-
+  user-select: none
 
 pre
-    background: #fcfcfc
-    margin-bottom: 3rem
-    border-radius: 0
-    padding: 10px 20px
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.08), 0px 0px 4px rgba(0,0,0,0.05)
-    overflow-x: hidden
-    white-space: pre-wrap
-    code
-        display: block
-        font-size: 1.75rem
-        line-height: 1.6
-        color: inherit
-        background: none
-        padding: .9em .5em
-        +mobile
-            font-size: 1.25rem
-        +tablet
-            font-size: 1.5rem
+  background: #fcfcfc
+  margin-bottom: 3rem
+  border-radius: 0
+  padding: 10px 20px
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.08), 0px 0px 4px rgba(0,0,0,0.05)
+  overflow-x: hidden
+  white-space: pre-wrap
+  code
+    display: block
+    font-size: 1.75rem
+    line-height: 1.6
+    color: inherit
+    background: none
+    padding: .9em .5em
+    +mobile
+      font-size: 1.25rem
+    +tablet
+      font-size: 1.5rem
+
+
+
+
+header, footer
+  text-align: center
 
 main
-    margin: 10rem 0 0 0
-    min-height: 1080px
-
-
+  margin: 10rem 0 0 0
+  min-height: 1080px
 
 
 
 /*  ARTICLE  / PAGE
  * ------------------------------------------------------------ */
 article
-    padding: 0 20px
-    strong
-        font-weight: 500
-
-    h1
-        font-style: italic
-        color: #111
-        +mobile
-            font-size: 3rem
-        +tablet
-            font-size: 4rem
+  padding: 0 20px
+  // Añade ahora h1 en markdown # posts
+  @at-root section h1
+    display: none
 
 
-    h2
-        display: flex
-        margin: 5rem 0 2.5rem
-        padding-bottom: 0
-        color: #30373b
-        +mobile
-            font-size: 2.5rem
-        +tablet
-            font-size: 3rem
-        &:after
-            content: ""
-            background: linear-gradient(to right,#000,transparent)
-            height: 1px
-            position: relative
-            top: 0
-            left: 0
-            bottom: 0
-            right: 0
-            width: auto
-            margin: .95em 2px 0 10px
-            flex-grow: 1
-            border-radius: 2px
+  h1
+    font-style: italic
+    color: #111
+    +mobile
+      font-size: 3rem
+    +tablet
+      font-size: 4rem
 
+  h2
+    display: flex
+    margin: 5rem 0 2.5rem
+    padding-bottom: 0
+    color: #30373b
+    +mobile
+      font-size: 2.5rem
+    +tablet
+      font-size: 3rem
+    &:after
+      content: ""
+      background: linear-gradient(to right,#000,transparent)
+      height: 1px
+      position: relative
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      width: auto
+      margin: .95em 2px 0 10px
+      flex-grow: 1
+      border-radius: 2px
 
-    h3
-        margin: 5rem 0 2rem
-        text-align: left
-        font-weight: 500
-        color: #151515
-        font-size: 2.1rem
+  h3
+    margin: 5rem 0 2rem
+    text-align: left
+    font-weight: 500
+    color: #151515
+    font-size: 2.1rem
 
+  // Referencias
+  h4
+    font-size: 1.75rem
+    margin: 10rem 0 0
+    font-style: italic
+    color: $gray-color
 
-    // Referencias
-    h4
-        font-size: 1.75rem
-        margin: 10rem 0 0
-        font-style: italic
-        color: $gray-color
-
-    h4 + ul:last-of-type
-        li
-            font-size: 2rem
-            border-bottom: none
-            margin: 0
-            word-wrap: break-word
-            hyphens: auto
-
-
-    // Nombre de archivo
-    h5
-        font-size: 1.25rem
-        text-align: right
-        margin: 5rem 0 0
-        code
-            color: $gray-color
-            background: none
-
-
-    // Fecha
-    .meta
-        font-size: 1.5rem
-        padding-top: 1rem
-        code
-            background: #fafafa
-
-
-    // Texto enfatizado amarillo
-    em
-        background-color: rgba(236,198,48,0.15)
-        line-height: inherit
-        padding: 1px 4px 3px 4px
-        white-space: pre-wrap
-        border-bottom: 2px solid rgba(236,198,48,0.3)
-        font-style: normal
-
-
-    hr
-        width: 15%
-        border: 0
-        border-top: 3px solid $gray-color-light
-        margin: 2.5em auto 2.3em
-
-
-    p, ol li, ul li
-        font-size: 22px
-        +mobile
-            font-size: 18px
-        +tablet
-            font-size: 20px
-
-    ul
-        list-style: none
-        li:before
-            content: ""
-            display: block
-            position: relative
-            left: -1.2em
-            top: 21px
-            width: 6px
-            height: 6px
-            border-radius: 50%
-            border: solid 1px $gray-color
-    ol
-        list-style: none
-        margin-left: 0
-
-
-
+  h4 + ul:last-of-type
     li
-        border-bottom: 2px solid rgba(172, 179, 194, 0.15)
-        margin-bottom: .8em
-        padding-bottom: .7em
+      font-size: 2rem
+      border-bottom: none
+      margin: 0
+      word-wrap: break-word
+      hyphens: auto
 
+  // Nombre de archivo
+  h5
+    font-size: 1.25rem
+    text-align: right
+    margin: 5rem 0 0
+    code
+      color: $gray-color
+      background: none
+
+  // Fecha
+  .meta
+    font-size: 1.5rem
+    padding-top: 1rem
+    code
+      background: #fafafa
+
+  // Texto enfatizado amarillo
+  em
+    background-color: rgba(236,198,48,0.15)
+    line-height: inherit
+    padding: 1px 4px 3px 4px
+    white-space: pre-wrap
+    border-bottom: 2px solid rgba(236,198,48,0.3)
+    font-style: normal
+
+  hr
+    width: 15%
+    border: 0
+    border-top: 3px solid $gray-color-light
+    margin: 2.5em auto 2.3em
+
+  p, ol li, ul li
+    font-size: 22px
+    +mobile
+      font-size: 18px
+    +tablet
+      font-size: 20px
+
+  ul
+    list-style: none
+    li:before
+      content: ""
+      display: block
+      position: relative
+      left: -1.2em
+      top: 21px
+      width: 6px
+      height: 6px
+      border-radius: 50%
+      border: solid 1px $gray-color
+
+  ol
+    list-style: none
+    margin-left: 0
+
+  li
+    border-bottom: 2px solid rgba(172, 179, 194, 0.15)
+    margin-bottom: .8em
+    padding-bottom: .7em
 
 
 article.page
-    h1
-        margin-bottom: 5rem
-        padding-top: 1.5rem
-        font-weight: 500
+  h1
+    margin-bottom: 5rem
+    padding-top: 1.5rem
+    font-weight: 500
 
 
 
@@ -346,7 +331,8 @@ a.grid-item__link
 
 // Invertir el color de los svgicon
 .grid-item__link svg
-    filter: invert(1)
+    // filter: invert(1)
+    fill: #fff
     width: 52px
     height: 52px
 

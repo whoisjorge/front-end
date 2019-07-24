@@ -8,12 +8,14 @@ category    : vuejs
 tags        : cheatsheet snippets
 
 ---
+# Conexión sencilla a la API de Steam utilizando Axios
 
-<code style="font-size: 1rem"> v2.5.1 </code>
+{: .info-box .hint}
+La versión de Vue utilizada es 2.5.1
 
 [Axios](https://github.com/mzabriskie/axios) es una librería JavaScript que actúa como *cliente HTTP* basado en Promesas. Permite la interactividad con *AJAX* de forma asíncrona en una aplicación web, tanto en la parte del Front-end como en la del Back-end mediante [Node.js](https://nodejs.org).
 
-### Instalacion
+## Instalacion
 
 ```sh
 $ npm install axios
